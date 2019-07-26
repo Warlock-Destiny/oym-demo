@@ -17,6 +17,8 @@
     <!-- 项目模块 -->
     <modules>
         <module>zyd-demo-config</module>
+        <module>zyd-demo-eureka</module>
+        <module>zyd-demo-web</module>
     </modules>
 
     <!-- 配置基础依赖 springboot及springCloud依赖 -->
