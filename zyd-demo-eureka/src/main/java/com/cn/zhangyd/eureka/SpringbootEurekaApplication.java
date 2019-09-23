@@ -1,4 +1,4 @@
-package com.cn.zhangyd.springboot.eureka;
+package com.cn.zhangyd.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

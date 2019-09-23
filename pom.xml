@@ -5,6 +5,7 @@
     <!-- 项目信息 -->
     <groupId>com.cn</groupId>
     <artifactId>zyd-demo</artifactId>
+    <packaging>pom</packaging>
     <version>1.0.0</version>
 
     <!-- 统一配置文件 -->
@@ -19,6 +20,10 @@
         <module>zyd-demo-config</module>
         <module>zyd-demo-eureka</module>
         <module>zyd-demo-web</module>
+        <module>zyd-demo-quartz</module>
+        <module>zyd-demo-freemarker</module>
+        <module>zyd-demo-activiti</module>
+        <module>zhangyd-demo-common</module>
     </modules>
 
     <!-- 配置基础依赖 springboot及springCloud依赖 -->
