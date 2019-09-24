@@ -15,7 +15,6 @@ import org.springframework.stereotype.Component;
 @Component
 public class RedisConfig {
     @Bean
-    @ConditionalOnMissingBean
     public StringKeyRedisTemplate StringKeyRedisTemplate(RedisConnectionFactory redisConnectionFactory)  {
         StringKeyRedisTemplate template = new StringKeyRedisTemplate();
         template.setConnectionFactory(redisConnectionFactory);
