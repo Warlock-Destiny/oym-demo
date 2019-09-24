@@ -1,4 +1,4 @@
-package com.cn.zyd.web.zyd.redis;
+package com.cn.zyd.util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
@@ -9,7 +9,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 /**
  * @author zhangyd
- * @date 2019/9/2423:41
+ * @date 2019/9/24 23:41
  * @desc redis操作类
  */
 @Component

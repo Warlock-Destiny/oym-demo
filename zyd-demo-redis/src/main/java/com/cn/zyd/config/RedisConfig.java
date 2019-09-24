@@ -1,4 +1,4 @@
-package com.cn.zyd.web.zyd.redis.config;
+package com.cn.zyd.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 /**
  * @author zhangyd
- * @date 2019/9/2423:38
+ * @date 2019/9/24 23:38
  * @desc
  */
 @Component
