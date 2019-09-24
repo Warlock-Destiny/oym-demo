@@ -3,10 +3,10 @@
   <process id="aaaaaaaa" isExecutable="true">
     <startEvent id="sid-0D721B41-6E93-4BB4-BFAF-9236F13A5E50" name="开始"></startEvent>
     <endEvent id="sid-B7AA9110-52BC-42EC-8C65-13A651156156" name="结束"></endEvent>
-    <serviceTask id="sid-9AEE3858-7A4D-40BF-AE8B-93C6AA1EBF32" name="流程1" activiti:class="com.cn.process.Process1"></serviceTask>
+    <serviceTask id="sid-9AEE3858-7A4D-40BF-AE8B-93C6AA1EBF32" name="流程1" activiti:class="Process1"></serviceTask>
     <sequenceFlow id="sid-B7B14D53-D7F7-4283-9932-2EBB28DCCA31" sourceRef="sid-0D721B41-6E93-4BB4-BFAF-9236F13A5E50" targetRef="sid-9AEE3858-7A4D-40BF-AE8B-93C6AA1EBF32"></sequenceFlow>
     <sequenceFlow id="sid-D24E47AF-B98F-4362-AA16-F198F956D9FC" sourceRef="sid-9AEE3858-7A4D-40BF-AE8B-93C6AA1EBF32" targetRef="sid-155148B2-C4A7-4A4C-802A-88D11A6D631D"></sequenceFlow>
-    <serviceTask id="sid-155148B2-C4A7-4A4C-802A-88D11A6D631D" name="流程2" activiti:class="com.cn.process.Process2"></serviceTask>
+    <serviceTask id="sid-155148B2-C4A7-4A4C-802A-88D11A6D631D" name="流程2" activiti:class="Process2"></serviceTask>
     <sequenceFlow id="sid-BD9BDB40-5614-4281-A006-5BC12C85E360" sourceRef="sid-155148B2-C4A7-4A4C-802A-88D11A6D631D" targetRef="sid-B7AA9110-52BC-42EC-8C65-13A651156156"></sequenceFlow>
   </process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_process">

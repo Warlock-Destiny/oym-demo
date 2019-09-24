@@ -17,16 +17,20 @@
 
     <!-- 项目模块 -->
     <modules>
+        <module>zyd-demo-common</module>
         <module>zyd-demo-config</module>
         <module>zyd-demo-eureka</module>
         <module>zyd-demo-web</module>
         <module>zyd-demo-quartz</module>
         <module>zyd-demo-freemarker</module>
         <module>zyd-demo-activiti</module>
-        <module>zhangyd-demo-common</module>
+        <module>zyd-demo-redis</module>
     </modules>
 
     <!-- 配置基础依赖 springboot及springCloud依赖 -->
+    <dependencies>
+
+    </dependencies>
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -49,14 +53,21 @@
 
     <!-- 提供基础插件配置 -->
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-maven-plugin</artifactId>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.6.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
 </project>
