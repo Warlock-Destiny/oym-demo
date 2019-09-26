@@ -46,6 +46,7 @@ def generateMapping(out, tableName, className, classComment, fields) {
     //batchInsert
     generateInsert(out, tableName, className, classComment, fields)
     generateBatchInsert(out, tableName, className, classComment, fields)
+    selectById(out, tableName, className, classComment, fields)
     out.println "</mapper>"
 }
 
@@ -114,7 +115,7 @@ def selectById(out, tableName, className, classComment, fields){
             out.println "            $field.columnName,"
         }
     }
-    out.println "    FROM $tableName where id =#{id}"
+    out.println "        FROM $tableName where id =#{id}"
     out.println "    </select>"
 }
 

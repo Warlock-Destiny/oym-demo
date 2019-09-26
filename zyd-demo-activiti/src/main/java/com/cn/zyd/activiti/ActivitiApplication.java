@@ -1,16 +1,17 @@
 package com.cn.zyd.activiti;
 
-import com.cn.zyd.base.zyd.common.SpringContextHolder;
-import com.cn.zyd.activiti.service.TestZhangydService;
+import org.activiti.spring.boot.SecurityAutoConfiguration;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
+@MapperScan("com.cn.zyd.activiti.dao")
 public class ActivitiApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ActivitiApplication.class, args);
-        SpringContextHolder.getBean(TestZhangydService.class).deploy();
     }
 
 }
