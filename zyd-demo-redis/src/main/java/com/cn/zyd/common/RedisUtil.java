@@ -1,4 +1,4 @@
-package com.cn.zyd.redis.util;
+package com.cn.zyd.common;
 
 import com.cn.zyd.redis.StringKeyRedisTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
