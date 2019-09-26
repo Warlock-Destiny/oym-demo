@@ -16,6 +16,16 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.cn</groupId>
+            <artifactId>zyd-demo-base</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.cn</groupId>
+            <artifactId>zyd-demo-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.activiti</groupId>
             <artifactId>activiti-spring-boot-starter-basic</artifactId>
             <version>6.0.0</version>

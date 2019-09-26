@@ -25,11 +25,17 @@
         <module>zyd-demo-freemarker</module>
         <module>zyd-demo-activiti</module>
         <module>zyd-demo-redis</module>
+        <module>zyd-demo-base</module>
     </modules>
 
     <!-- 配置基础依赖 springboot及springCloud依赖 -->
     <dependencies>
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
     <dependencyManagement>
         <dependencies>
