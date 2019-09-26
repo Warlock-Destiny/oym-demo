@@ -25,6 +25,7 @@
         <module>zyd-demo-freemarker</module>
         <module>zyd-demo-activiti</module>
         <module>zyd-demo-redis</module>
+        <module>zyd-demo-base</module>
     </modules>
 
     <!-- 配置基础依赖 springboot及springCloud依赖 -->

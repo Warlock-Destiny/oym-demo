@@ -1,6 +1,6 @@
 package com.cn.zyd.activiti;
 
-import com.cn.zyd.common.SpringContextHolder;
+import com.cn.zyd.base.zyd.common.SpringContextHolder;
 import com.cn.zyd.activiti.service.TestZhangydService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
