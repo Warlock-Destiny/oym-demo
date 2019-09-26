@@ -15,6 +15,7 @@ public interface BaseDao<T> {
      * @return 插入主键
      */
     Long insert(T t);
+
     /**
      * 批量插入
      */
@@ -30,6 +31,7 @@ public interface BaseDao<T> {
 
     /**
      * 根据id进行更新
+     *
      * @param t 实体类
      * @return 更新的数量
      */
@@ -37,6 +39,7 @@ public interface BaseDao<T> {
 
     /**
      * 根据id进行部分更新
+     *
      * @param t 实体类
      * @return 更新的数量
      */

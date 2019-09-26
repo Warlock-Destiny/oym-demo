@@ -35,37 +35,92 @@ def generate(table, dir) {
 //    new File(dir, "entity/" + className + ".java").withPrintWriter { out -> generateEntity(out, className, classComment, fields) }
     new File(dir, "mapping/" + className + ".xml").withPrintWriter { out -> generateMapping(out,table.getName(), className, classComment, fields) }
 }
-
+/**
+ * 生成mapping文件
+ */
 def generateMapping(out, tableName, className, classComment, fields) {
     out.println "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
             "<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\">\n" +
             "<mapper namespace=\"com.cn.zyd.activiti.dao.TestZhangydDao\">"
+
+    //batchInsert
+    generateInsert(out, tableName, className, classComment, fields)
+    generateBatchInsert(out, tableName, className, classComment, fields)
+    out.println "</mapper>"
+}
+
+def generateInsert(out, tableName, className, classComment, fields){
     //insert
     out.println "    <insert id=\"insert\" parameterType=\"$basePath.$className\">"
     out.println "        INSERT INTO $tableName ("
     for (int i = 0; i < fields.size(); i++) {
         field = fields.get(i);
         if (i == (fields.size() - 1)) {
-          out.println "            $field.columnName"
+            out.println "            $field.columnName"
         }else{
-          out.println "            $field.columnName,"
+            out.println "            $field.columnName,"
         }
     }
     out.println "        ) VALUES("
     for (int i = 0; i < fields.size(); i++) {
-      field = fields.get(i);
-      if (i == (fields.size() - 1)) {
-        out.println "            $field.name"
-      }else{
-        out.println "            $field.name,"
-      }
+        field = fields.get(i);
+        if (i == (fields.size() - 1)) {
+            out.println "            #{$field.name}"
+        }else{
+            out.println "            #{$field.name},"
+        }
     }
     out.println "        )"
     out.println "    </insert>"
-    //batchInsert
-    out.println "</mapper>"
 }
 
+def generateBatchInsert(out, tableName, className, classComment, fields){
+    //insert
+    out.println "    <insert id=\"batchInsert\" parameterType=\"$basePath.$className\">"
+    out.println "        INSERT INTO $tableName ("
+    for (int i = 0; i < fields.size(); i++) {
+        field = fields.get(i);
+        if (i == (fields.size() - 1)) {
+            out.println "            $field.columnName"
+        }else{
+            out.println "            $field.columnName,"
+        }
+    }
+    out.println "        ) VALUES"
+    out.println "        <foreach collection=\"items\" item=\"item\" separator=\",\">"
+    out.println "        ("
+    for (int i = 0; i < fields.size(); i++) {
+        field = fields.get(i);
+        if (i == (fields.size() - 1)) {
+            out.println "            #{$field.name}"
+        }else{
+            out.println "            #{$field.name},"
+        }
+    }
+    out.println "        )"
+    out.println "        </foreach>"
+    out.println "    </insert>"
+}
+
+def selectById(out, tableName, className, classComment, fields){
+    //insert
+    out.println "    <select id=\"selectById\" parameterType=\"java.lang.Long\" resultType=\"$basePath.$className\">"
+    out.println "        SELECT "
+    for (int i = 0; i < fields.size(); i++) {
+        field = fields.get(i);
+        if (i == (fields.size() - 1)) {
+            out.println "            $field.columnName"
+        }else{
+            out.println "            $field.columnName,"
+        }
+    }
+    out.println "    FROM $tableName where id =#{id}"
+    out.println "    </select>"
+}
+
+/**
+ * 生成dao文件
+ */
 def generateDao(out, className, classComment, fields) {
     out.println "package $packageName" + ".dao;"
     out.println ""
@@ -75,7 +130,9 @@ def generateDao(out, className, classComment, fields) {
     out.println "public interface $className" + "Dao extends BaseDao<$className> {"
     out.println "}"
 }
-
+/**
+ * 生成实体类文件
+ */
 def generateEntity(out, className, classComment, fields) {
     out.println "package $packageName" + ".entity;"
     out.println ""
