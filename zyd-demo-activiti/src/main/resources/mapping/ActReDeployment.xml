@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cn.zyd.auth.dao.ActReDeploymentDao">
-    <insert id="insert" parameterType="com.cn.zyd.auth.entity.ActReDeployment">
+<mapper namespace="com.cn.zyd.activiti.dao.ActReDeploymentDao">
+    <insert id="insert" parameterType="com.cn.zyd.activiti.entity.ActReDeployment">
         INSERT INTO act_re_deployment (
             ID_,
             NAME_,
@@ -20,7 +20,7 @@
             #{engineVersion}
         )
     </insert>
-    <insert id="batchInsert" parameterType="com.cn.zyd.auth.entity.ActReDeployment">
+    <insert id="batchInsert" parameterType="com.cn.zyd.activiti.entity.ActReDeployment">
         INSERT INTO act_re_deployment (
             ID_,
             NAME_,

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.cn.zyd.auth.dao.TestZhangydDao">
-    <insert id="insert" parameterType="com.cn.zyd.auth.entity.ActGeBytearray">
+<mapper namespace="com.cn.zyd.activiti.dao.ActGeBytearrayDao">
+    <insert id="insert" parameterType="com.cn.zyd.activiti.entity.ActGeBytearray">
         INSERT INTO act_ge_bytearray (
             ID_,
             REV_,
@@ -18,4 +18,7 @@
             #{generated}
         )
     </insert>
+    <select id="selectByDeploymentId" resultType="java.util.Map">
+        SELECT * FROM act_ge_bytearray WHERE DEPLOYMENT_ID_=#{DEPLOYMENT_ID_}
+    </select>
 </mapper>
