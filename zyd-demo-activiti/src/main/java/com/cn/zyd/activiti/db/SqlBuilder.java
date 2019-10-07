@@ -28,6 +28,9 @@ public class SqlBuilder {
     }
 
     public String buildInsertSql() {
+        if (columnName2Value == null) {
+            return "";
+        }
         StringBuilder sb = new StringBuilder();
         sb.append("INSERT INTO ").append(db).append(".").append(table).append("(");
         List<String> columnList = entityModel.getColumns().stream().map(EntityModel.Field::getColumnName).collect(Collectors.toList());
@@ -47,6 +50,9 @@ public class SqlBuilder {
     }
 
     public String buildDeleteSql() {
+        if (columnName2Value == null) {
+            return "";
+        }
         StringBuilder sb = new StringBuilder();
         EntityModel.Field field = entityModel.getColumns().stream().filter(EntityModel.Field::isPrimary).findFirst().orElse(null);
         if (field == null) {

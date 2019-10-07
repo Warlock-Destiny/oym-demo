@@ -47,7 +47,7 @@ public class ActivitiService {
     /**
      * 根据bpmn转换成sql
      */
-    public String createProcess(String deploymentName, String bpmnXml) {
+    public String deploy(String deploymentName, String bpmnXml) {
         // 1 部署实例
         Deployment deployment = repositoryService.createDeployment().addString(deploymentName, bpmnXml).deploy();
         if (deployment == null) {
@@ -67,7 +67,7 @@ public class ActivitiService {
             sqlBuilderList.add(madeSqlBuilder(DB, ACT_GE_BYTEARRAY, x));
         });
         // act_re_procdef
-//        sqlBuilderList.add(madeSqlBuilder(DB, ACT_RE_PROCDEF, actReProcdefDao.selectByDeploymentId(deploymentId)));
+        sqlBuilderList.add(madeSqlBuilder(DB, ACT_RE_PROCDEF, actReProcdefDao.selectByDeploymentId(deploymentId)));
         StringBuilder sb = new StringBuilder();
         sqlBuilderList.forEach(x -> {
             sb.append(x.buildInsertSql()).append("\n");
