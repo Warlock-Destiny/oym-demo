@@ -22,5 +22,5 @@ public interface ColumnsDao extends BaseDao {
      * @param table 表名
      * @return 字段名
      */
-    List<ColumnInfo> selectTableInfoByDbAndTable(@Param("db") String db,@Param("table") String table);
+    List<ColumnInfo> selectTableInfoByDbAndTable(@Param("db") String db, @Param("table") String table);
 }

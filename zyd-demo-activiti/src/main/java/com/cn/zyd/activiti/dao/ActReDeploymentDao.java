@@ -9,5 +9,5 @@ import java.util.Map;
 @Repository
 public interface ActReDeploymentDao extends BaseDao<ActReDeployment> {
 
-    Map<String,Object> selectById(String id);
+    Map<String, Object> selectById(String id);
 }

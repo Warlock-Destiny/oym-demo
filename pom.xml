@@ -27,6 +27,7 @@
         <module>zyd-demo-redis</module>
         <module>zyd-demo-base</module>
         <module>zyd-demo-auth</module>
+        <module>zyd-demo-swagger</module>
     </modules>
 
     <!-- 配置基础依赖 springboot及springCloud依赖 -->

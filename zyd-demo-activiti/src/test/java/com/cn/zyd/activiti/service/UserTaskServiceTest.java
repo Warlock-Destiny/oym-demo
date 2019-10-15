@@ -1,6 +1,5 @@
 package com.cn.zyd.activiti.service;
 
-import org.activiti.engine.TaskService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +20,16 @@ public class UserTaskServiceTest {
 
     @Test
     public void test() {
-        userTaskService.queryTaskByUserId("张三");
+        System.out.println(userTaskService.queryTaskByUserId("张三"));;
+    }
+
+    @Test
+    public void completeTask() {
+        userTaskService.completeTask("李四","5deed95c-e915-11e9-aabf-3c918097a91a");
+    }
+
+    @Test
+    public void getHistoryTask(){
+        System.out.println(userTaskService.queryHistoryTask("张三"));
     }
 }

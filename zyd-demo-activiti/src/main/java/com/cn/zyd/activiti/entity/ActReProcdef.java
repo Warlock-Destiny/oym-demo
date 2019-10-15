@@ -2,6 +2,7 @@ package com.cn.zyd.activiti.entity;
 
 import lombok.Data;
 import lombok.experimental.Accessors;
+
 import java.io.Serializable;
 
 /**
