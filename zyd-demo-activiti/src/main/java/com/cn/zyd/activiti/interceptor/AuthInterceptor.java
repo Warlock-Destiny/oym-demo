@@ -27,12 +27,7 @@ public class AuthInterceptor implements HandlerInterceptor {
         if (principal == null) {
             return true;
         }
-        String username;
-        if (principal instanceof UserDetails) {
-            username = ((UserDetails) principal).getUsername();
-        } else {
-            username = principal.toString();
-        }
+        String username = (principal instanceof UserDetails) ? ((UserDetails) principal).getUsername() : principal.toString();
         Authentication.setAuthenticatedUserId(username);
         return true;
     }
