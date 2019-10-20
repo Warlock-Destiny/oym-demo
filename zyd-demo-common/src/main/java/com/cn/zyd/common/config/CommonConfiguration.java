@@ -19,7 +19,6 @@ public class CommonConfiguration {
     }
 
     @Bean
-    @ConditionalOnProperty("spring")
     public MailUtil mailUtil() {
         return new MailUtil();
     }
