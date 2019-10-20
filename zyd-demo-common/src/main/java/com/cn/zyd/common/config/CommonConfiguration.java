@@ -2,6 +2,7 @@ package com.cn.zyd.common.config;
 
 import com.cn.zyd.common.spring.SpringContextHolder;
 import com.cn.zyd.common.util.MailUtil;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -18,6 +19,7 @@ public class CommonConfiguration {
     }
 
     @Bean
+    @ConditionalOnProperty("spring")
     public MailUtil mailUtil() {
         return new MailUtil();
     }
