@@ -1,6 +1,7 @@
 package com.cn.zyd.common.config;
 
-import com.cn.zyd.common.SpringContextHolder;
+import com.cn.zyd.common.spring.SpringContextHolder;
+import com.cn.zyd.common.util.MailUtil;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -14,5 +15,10 @@ public class CommonConfiguration {
     @Bean
     public SpringContextHolder initSpringContextHolder() {
         return new SpringContextHolder();
+    }
+
+    @Bean
+    public MailUtil mailUtil() {
+        return new MailUtil();
     }
 }
