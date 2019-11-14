@@ -31,6 +31,16 @@ public class UserDaoTest {
     }
 
     @Test
+    public void testUserInserts() {
+        SysUser sysUser = new SysUser();
+        sysUser.setUsername("zyd")
+                .setPassword("123")
+                .setUserMail("zyd@qq.com");
+        sysUser.setCreateTime(new Date());
+        sysUserDao.insertaaa(sysUser);
+    }
+
+    @Test
     public void testUpdate() {
         SysUser sysUser = new SysUser();
         sysUser.setId(1L);

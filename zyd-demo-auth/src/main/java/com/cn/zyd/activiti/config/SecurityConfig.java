@@ -1,7 +1,7 @@
 package com.cn.zyd.activiti.config;
 
-import com.cn.zyd.activiti.service.AccessDecisionService;
-import com.cn.zyd.activiti.service.PermissionSecurityMetadataSource;
+import com.cn.zyd.auth.service.AccessDecisionService;
+import com.cn.zyd.auth.service.PermissionSecurityMetadataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.ObjectPostProcessor;
