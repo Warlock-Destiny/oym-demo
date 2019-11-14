@@ -5,6 +5,7 @@ import com.cn.zyd.activiti.dto.HistoricProcessInstanceDto;
 import com.cn.zyd.activiti.dto.ProcessStartDto;
 import com.cn.zyd.activiti.query.ProcessQuery;
 import com.cn.zyd.activiti.service.ProcessService;
+import com.cn.zyd.base.controller.BaseController;
 import com.cn.zyd.base.model.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -20,7 +21,7 @@ import java.util.List;
 @RestController
 @RequestMapping("process")
 @Api(value = "流程操作", tags = "外部接口调用")
-public class ProcessController {
+public class ProcessController extends BaseController {
 
     @Autowired
     private ProcessService processService;

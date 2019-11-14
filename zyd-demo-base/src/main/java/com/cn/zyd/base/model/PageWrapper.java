@@ -20,4 +20,5 @@ public class PageWrapper<T> implements Serializable {
     public static <T> PageWrapper<T> data(long total, List<T> t) {
         return new PageWrapper<T>().setTotal(total).setData(t);
     }
+
 }

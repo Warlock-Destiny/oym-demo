@@ -11,7 +11,7 @@ import org.apache.ibatis.scripting.defaults.RawSqlSource;
  * @date 2019/10/20 17:54
  * @desc
  */
-public class GetById extends AbstractMethod {
+public class Demo extends AbstractMethod {
     @Override
     public MappedStatement injectMappedStatement(Class<?> mapperClass, Class<?> modelClass, TableInfo tableInfo) {
         String sql = "SELECT %s FROM %s WHERE %s=#{%s} %s";
@@ -19,6 +19,6 @@ public class GetById extends AbstractMethod {
                 sqlSelectColumns(tableInfo, false),
                 tableInfo.getTableName(), tableInfo.getKeyColumn(), tableInfo.getKeyProperty(),
                 tableInfo.getLogicDeleteSql(true, false)), Object.class);
-        return this.addSelectMappedStatementForTable(mapperClass, "getById", sqlSource, tableInfo);
+        return this.addSelectMappedStatementForTable(mapperClass, "demo", sqlSource, tableInfo);
     }
 }

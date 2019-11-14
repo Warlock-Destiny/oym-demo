@@ -3,6 +3,7 @@ package com.cn.zyd.activiti.controller;
 import com.cn.zyd.activiti.dto.DeploymentDto;
 import com.cn.zyd.activiti.dto.ProcessDto;
 import com.cn.zyd.activiti.service.impl.DeploymentServiceImpl;
+import com.cn.zyd.base.controller.BaseController;
 import com.cn.zyd.base.model.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -18,7 +19,7 @@ import java.util.List;
 @RestController
 @RequestMapping("deployment")
 @Api(value = "部署操作", tags = "仅供开发人员使用")
-public class DeploymentController {
+public class DeploymentController extends BaseController {
 
     @Autowired
     private DeploymentServiceImpl deploymentServiceImpl;

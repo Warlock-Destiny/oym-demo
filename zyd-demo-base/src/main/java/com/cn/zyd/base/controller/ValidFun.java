@@ -1,6 +1,6 @@
 package com.cn.zyd.base.controller;
 
-import com.cn.zyd.base.constant.SortEnum;
+import com.cn.zyd.base.db.constant.SortEnum;
 import com.cn.zyd.base.exception.ParamException;
 import org.apache.commons.lang3.StringUtils;
 

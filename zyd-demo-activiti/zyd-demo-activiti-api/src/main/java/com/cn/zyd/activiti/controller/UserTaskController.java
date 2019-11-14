@@ -4,6 +4,7 @@ import com.cn.zyd.activiti.dto.CompleteTaskDto;
 import com.cn.zyd.activiti.dto.HisTaskDto;
 import com.cn.zyd.activiti.dto.TaskDto;
 import com.cn.zyd.activiti.service.UserTaskService;
+import com.cn.zyd.base.controller.BaseController;
 import com.cn.zyd.base.model.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,7 +18,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("task")
-public class UserTaskController {
+public class UserTaskController extends BaseController {
 
     @Autowired
     private UserTaskService userTaskService;

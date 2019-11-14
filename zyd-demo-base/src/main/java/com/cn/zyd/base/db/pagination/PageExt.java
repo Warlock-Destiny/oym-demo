@@ -2,7 +2,7 @@ package com.cn.zyd.base.db.pagination;
 
 import com.baomidou.mybatisplus.core.metadata.OrderItem;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.cn.zyd.base.constant.SortEnum;
+import com.cn.zyd.base.db.constant.SortEnum;
 import org.apache.commons.lang3.StringUtils;
 
 /**

@@ -13,7 +13,7 @@ import java.io.Serializable;
 public class Result<T> implements Serializable {
     public static final int OK = 0;
     public static final int FAIL = 1;
-    public static final int NO_AUTH = 403;
+    public static final int NO_AUTH = 401;
 
     private int code;
     private String msg;

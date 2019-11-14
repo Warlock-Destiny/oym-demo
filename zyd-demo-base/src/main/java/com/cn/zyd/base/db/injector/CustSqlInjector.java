@@ -3,7 +3,7 @@ package com.cn.zyd.base.db.injector;
 import com.baomidou.mybatisplus.core.injector.AbstractMethod;
 import com.baomidou.mybatisplus.core.injector.AbstractSqlInjector;
 import com.baomidou.mybatisplus.core.injector.methods.*;
-import com.cn.zyd.base.db.method.GetById;
+import com.cn.zyd.base.db.method.Demo;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -36,7 +36,7 @@ public class CustSqlInjector extends AbstractSqlInjector {
                 new SelectObjs(),
                 new SelectList(),
                 new SelectPage(),
-                new GetById()
+                new Demo()
         ).collect(toList());
     }
 }
