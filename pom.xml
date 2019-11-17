@@ -19,16 +19,10 @@
 
     <modules>
         <module>zyd-demo-common</module>
-        <module>zyd-demo-config</module>
-        <module>zyd-demo-eureka</module>
-        <module>zyd-demo-web</module>
         <module>zyd-demo-quartz</module>
-        <module>zyd-demo-freemarker</module>
         <module>zyd-demo-activiti</module>
-        <module>zyd-demo-redis</module>
         <module>zyd-demo-base</module>
         <module>zyd-demo-auth</module>
-        <module>zyd-demo-swagger</module>
     </modules>
 
     <dependencies>
