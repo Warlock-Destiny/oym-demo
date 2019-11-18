@@ -55,7 +55,7 @@ public class TreeUtilTest {
         private String name;
         private String remark;
 
-        public TestClass(Long id, Long pid, String name, String remark) {
+        private TestClass(Long id, Long pid, String name, String remark) {
             this.id = id;
             this.pid = pid;
             this.name = name;

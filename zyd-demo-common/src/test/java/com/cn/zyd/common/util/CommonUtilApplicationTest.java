@@ -1,5 +1,6 @@
 package com.cn.zyd.common.util;
 
+import com.cn.zyd.common.mail.MailUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

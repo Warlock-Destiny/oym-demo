@@ -1,4 +1,4 @@
-package com.cn.zyd.common.util;
+package com.cn.zyd.common.mail;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,7 +1,7 @@
 package com.cn.zyd.common.config;
 
 import com.cn.zyd.common.spring.SpringContextHolder;
-import com.cn.zyd.common.util.MailUtil;
+import com.cn.zyd.common.mail.MailUtil;
 import com.cn.zyd.common.redis.RedisUtil;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
