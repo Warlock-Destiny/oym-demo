@@ -19,10 +19,6 @@ public class MailUtil {
 
     /**
      * 发送文本邮件
-     *
-     * @param to
-     * @param subject
-     * @param content
      */
     public void sendSimpleMail(String to, String subject, String content) {
         SimpleMailMessage message = new SimpleMailMessage();

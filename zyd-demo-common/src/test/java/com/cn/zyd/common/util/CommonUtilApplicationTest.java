@@ -19,7 +19,7 @@ public class CommonUtilApplicationTest {
 
     @Test
     public void testSendMail(){
-        mailUtil.sendSimpleMail("1571792921@qq.com","测试邮件","测试邮件内容");
+        mailUtil.sendSimpleMail("###@qq.com","测试邮件","测试邮件内容");
     }
 
 }

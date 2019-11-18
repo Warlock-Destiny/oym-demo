@@ -5,6 +5,7 @@ import com.cn.zyd.common.util.MailUtil;
 import com.cn.zyd.common.util.RedisUtil;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -27,10 +28,10 @@ public class CommonConfiguration {
     }
 
     @Bean
+    @ConditionalOnProperty(prefix = "spring.mail")
     public MailUtil mailUtil() {
         return new MailUtil();
     }
-
 
     @Configuration
     @EnableConfigurationProperties(RedisProperties.class)
@@ -54,8 +55,6 @@ public class CommonConfiguration {
             redisTemplate.setHashValueSerializer(new JdkSerializationRedisSerializer());
             return redisTemplate;
         }
-
     }
-
 
 }
