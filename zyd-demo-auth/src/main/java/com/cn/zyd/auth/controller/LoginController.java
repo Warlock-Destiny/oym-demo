@@ -1,4 +1,4 @@
-package com.cn.zyd.activiti.controller;
+package com.cn.zyd.auth.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;

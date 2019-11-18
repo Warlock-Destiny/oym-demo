@@ -1,4 +1,4 @@
-package com.cn.zyd.activiti.config;
+package com.cn.zyd.auth.config;
 
 import com.cn.zyd.auth.service.AccessDecisionService;
 import com.cn.zyd.auth.service.PermissionSecurityMetadataSource;

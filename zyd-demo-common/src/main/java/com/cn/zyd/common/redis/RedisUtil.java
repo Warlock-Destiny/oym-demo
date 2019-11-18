@@ -2,12 +2,14 @@ package com.cn.zyd.common.redis;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.connection.RedisStringCommands;
+import org.springframework.data.redis.core.RedisCallback;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.script.DefaultRedisScript;
+import org.springframework.data.redis.core.types.Expiration;
+import org.springframework.data.redis.serializer.RedisSerializer;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -495,4 +497,38 @@ public class RedisUtil {
             return 0L;
         }
     }
+
+    /**
+     * 分布式锁 上锁
+     *
+     * @param key       唯一的key 用来当锁
+     * @param requestId 用来判断锁是哪里来的
+     * @param expire    超时时间
+     */
+    public Boolean lock(String key, String requestId, long expire) {
+        RedisSerializer redisSerializer = redisTemplate.getKeySerializer();
+        RedisSerializer valueSerializer = redisTemplate.getValueSerializer();
+        try {
+            return redisTemplate.execute((RedisCallback<Boolean>) (connection) -> {
+                byte[] keyBytes = redisSerializer.serialize(key);
+                byte[] requestIdBytes = valueSerializer.serialize(requestId);
+                return connection.set(keyBytes, requestIdBytes, Expiration.milliseconds(expire), RedisStringCommands.SetOption.ifAbsent());
+            });
+        } catch (Exception e) {
+            log.error("redis lock失败,key:{},requestId:{},e:", key, requestId, e);
+            return false;
+        }
+    }
+
+    /**
+     * 分布式锁 解锁
+     *
+     * @param key       唯一的key 用来当锁
+     * @param requestId 用来判断锁是哪里来的
+     */
+    public Boolean unLock(String key, String requestId) {
+        String script = "if redis.call('get', KEYS[1]) == ARGV[1] then return redis.call('del', KEYS[1]) else return 0 end";
+        return redisTemplate.execute(new DefaultRedisScript<>(script, Boolean.class), Collections.singletonList(key), requestId);
+    }
+
 }

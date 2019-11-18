@@ -9,6 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>zyd-demo-quartz</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>zyd-demo-quartz-domain</module>
+        <module>zyd-demo-quartz-api</module>
+    </modules>
 
     <dependencies>
         <dependency>

@@ -1,4 +1,4 @@
-package com.cn.zyd.common.util;
+package com.cn.zyd.common.util.mail;
 
 import com.cn.zyd.common.mail.MailUtil;
 import org.junit.Test;
@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class CommonUtilApplicationTest {
+public class MailUtilTest {
     @Autowired
     private MailUtil mailUtil;
 

@@ -1,10 +1,9 @@
 package com.cn.zyd.common.config;
 
-import com.cn.zyd.common.spring.SpringContextHolder;
 import com.cn.zyd.common.mail.MailUtil;
 import com.cn.zyd.common.redis.RedisUtil;
+import com.cn.zyd.common.spring.SpringContextHolder;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.autoconfigure.data.redis.RedisProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -28,7 +27,7 @@ public class CommonConfiguration {
     }
 
     @Bean
-    @ConditionalOnProperty(prefix = "spring.mail")
+    @ConditionalOnProperty(prefix = "spring.mail", name = "host")
     public MailUtil mailUtil() {
         return new MailUtil();
     }
@@ -38,14 +37,6 @@ public class CommonConfiguration {
     static class RedisConfiguration {
 
         @Bean
-        @ConditionalOnBean(RedisTemplate.class)
-        public RedisUtil redisUtil() {
-            return new RedisUtil();
-        }
-
-        @Bean
-        @ConditionalOnBean(RedisConnectionFactory.class)
-        @ConditionalOnMissingBean(RedisTemplate.class)
         public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
             RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
             redisTemplate.setConnectionFactory(redisConnectionFactory);
@@ -55,6 +46,13 @@ public class CommonConfiguration {
             redisTemplate.setHashValueSerializer(new JdkSerializationRedisSerializer());
             return redisTemplate;
         }
+
+        @Bean
+        @ConditionalOnBean(RedisTemplate.class)
+        public RedisUtil redisUtil() {
+            return new RedisUtil();
+        }
+
     }
 
 }

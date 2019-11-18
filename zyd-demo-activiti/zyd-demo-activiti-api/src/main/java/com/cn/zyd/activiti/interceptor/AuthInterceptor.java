@@ -2,16 +2,11 @@ package com.cn.zyd.activiti.interceptor;
 
 import lombok.extern.slf4j.Slf4j;
 import org.activiti.engine.impl.identity.Authentication;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.util.Map;
-import java.util.Optional;
 
 /**
  * @author zyd
@@ -24,7 +19,7 @@ public class AuthInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) {
-        //todo 获取userId
+        Long userId = getUserId();
         Authentication.setAuthenticatedUserId(String.valueOf(userId));
         return true;
     }
@@ -34,6 +29,9 @@ public class AuthInterceptor implements HandlerInterceptor {
         Authentication.setAuthenticatedUserId(null);
     }
 
-    private void getUserId
+    //todo 获取userId
+    private Long getUserId() {
+        return 0L;
+    }
 
 }
