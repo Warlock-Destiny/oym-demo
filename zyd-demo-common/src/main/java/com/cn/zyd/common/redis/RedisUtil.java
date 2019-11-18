@@ -505,7 +505,7 @@ public class RedisUtil {
      * @param requestId 用来判断锁是哪里来的
      * @param expire    超时时间
      */
-    public Boolean lock(String key, String requestId, long expire) {
+    public Boolean tryLock(String key, String requestId, long expire) {
         RedisSerializer redisSerializer = redisTemplate.getKeySerializer();
         RedisSerializer valueSerializer = redisTemplate.getValueSerializer();
         try {
@@ -526,7 +526,7 @@ public class RedisUtil {
      * @param key       唯一的key 用来当锁
      * @param requestId 用来判断锁是哪里来的
      */
-    public Boolean unLock(String key, String requestId) {
+    public Boolean tryUnLock(String key, String requestId) {
         String script = "if redis.call('get', KEYS[1]) == ARGV[1] then return redis.call('del', KEYS[1]) else return 0 end";
         return redisTemplate.execute(new DefaultRedisScript<>(script, Boolean.class), Collections.singletonList(key), requestId);
     }

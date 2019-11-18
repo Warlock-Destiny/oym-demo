@@ -21,9 +21,9 @@ public class RedisUtilTest {
 
     @Test
     public void testLock() {
-        System.out.println(redisUtil.lock("key1", "111", 200000));
-        System.out.println(redisUtil.lock("key1", "111", 200000));
-        System.out.println(redisUtil.unLock("key1", "111"));
+        System.out.println(redisUtil.tryLock("key1", "111", 200000));
+        System.out.println(redisUtil.tryLock("key1", "111", 200000));
+        System.out.println(redisUtil.tryUnLock("key1", "111"));
     }
 
 }
