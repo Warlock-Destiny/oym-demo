@@ -1,7 +1,9 @@
 package com.cn.zyd.base.db.config;
 
 import com.baomidou.mybatisplus.core.config.GlobalConfig;
-import com.cn.zyd.base.db.injector.CustSqlInjector;
+import com.baomidou.mybatisplus.core.injector.AbstractSqlInjector;
+import com.baomidou.mybatisplus.core.injector.DefaultSqlInjector;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,15 +15,19 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class DbConfiguration {
 
+    /**
+     * 如果使用者需要自主声明便提供出去
+     */
     @Bean
-    public CustSqlInjector custSqlInjector() {
-        return new CustSqlInjector();
+    @ConditionalOnBean(AbstractSqlInjector.class)
+    public AbstractSqlInjector custSqlInjector() {
+        return new DefaultSqlInjector();
     }
 
     @Bean
-    public GlobalConfig globalConfig(CustSqlInjector custSqlInjector) {
+    public GlobalConfig globalConfig(AbstractSqlInjector abstractSqlInjector) {
         GlobalConfig globalConfig = new GlobalConfig();
-        globalConfig.setSqlInjector(custSqlInjector);
+        globalConfig.setSqlInjector(abstractSqlInjector);
         return globalConfig;
     }
 }

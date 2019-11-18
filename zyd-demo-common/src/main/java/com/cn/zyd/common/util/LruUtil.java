@@ -94,22 +94,10 @@ public class LruUtil<K, V> {
         private Node<K, V> prev;
         private Node<K, V> next;
 
-        public Node(K k, V v) {
+        private Node(K k, V v) {
             this.k = k;
             this.v = v;
         }
     }
 
-    public static void main(String[] args) {
-        LruUtil<Integer, Integer> lruUtil = new LruUtil<>(3);
-        lruUtil.set(1, 1);
-        lruUtil.set(2, 2);
-        lruUtil.set(3, 3);
-        lruUtil.set(4, 4);
-        System.out.println(lruUtil.get(1));
-        System.out.println(lruUtil.get(2));
-        lruUtil.set(5, 5);
-        System.out.println(lruUtil.get(2));
-        System.out.println(lruUtil.get(3));
-    }
 }

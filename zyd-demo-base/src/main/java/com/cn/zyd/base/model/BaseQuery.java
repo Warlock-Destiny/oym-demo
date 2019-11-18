@@ -1,6 +1,6 @@
 package com.cn.zyd.base.model;
 
-import com.cn.zyd.base.db.constant.SortEnum;
+import com.cn.zyd.base.constant.SortEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

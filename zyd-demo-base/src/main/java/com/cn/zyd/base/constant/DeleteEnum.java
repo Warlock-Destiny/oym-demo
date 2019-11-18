@@ -1,4 +1,4 @@
-package com.cn.zyd.base.db.constant;
+package com.cn.zyd.base.constant;
 
 /**
  * @author zyd
