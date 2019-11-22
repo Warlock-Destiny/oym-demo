@@ -19,7 +19,6 @@
 
     <modules>
         <module>zyd-demo-common</module>
-        <module>zyd-demo-quartz</module>
         <module>zyd-demo-activiti</module>
         <module>zyd-demo-base</module>
         <module>zyd-demo-auth</module>

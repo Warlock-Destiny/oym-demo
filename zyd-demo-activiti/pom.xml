@@ -10,8 +10,6 @@
         <version>1.0.0</version>
     </parent>
     <artifactId>zyd-demo-activiti</artifactId>
-    <version>1.0.0</version>
-
     <modules>
         <module>zyd-demo-activiti-api</module>
         <module>zyd-demo-activiti-domain</module>
