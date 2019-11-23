@@ -2,6 +2,7 @@ package com.cn.zyd.mq;
 
 
 import com.cn.zyd.mq.model.MqCallback;
+import com.cn.zyd.mq.model.MqSuit;
 
 import java.util.function.Consumer;
 
@@ -10,9 +11,8 @@ import java.util.function.Consumer;
  * @date 2019/11/21 11:04
  * @desc
  */
-public interface BaseConsumer<C extends MqCallback> extends BaseMqClient {
+public interface BaseConsumer<S extends MqSuit, C extends MqCallback> extends BaseMqClient {
 
-    void consumer(String queue, Consumer<C> function);
-
+    void consumer(S s, Consumer<C> function);
 
 }

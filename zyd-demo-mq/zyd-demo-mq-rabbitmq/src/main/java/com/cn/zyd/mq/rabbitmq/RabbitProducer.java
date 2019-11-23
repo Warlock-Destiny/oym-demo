@@ -1,6 +1,8 @@
-package com.cn.zyd.mq;
+package com.cn.zyd.mq.rabbitmq;
 
-import com.cn.zyd.mq.model.RabbitMqMessage;
+import com.cn.zyd.mq.BaseProducer;
+import com.cn.zyd.mq.MqClientAdapter;
+import com.cn.zyd.mq.rabbitmq.model.RabbitMqMessage;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,13 +13,15 @@ import org.springframework.stereotype.Service;
  * @desc
  */
 @Service
-public class RabbitProducer extends RabbitMqClient implements BaseProducer<RabbitMqMessage> {
+public class RabbitProducer extends MqClientAdapter implements BaseProducer<RabbitMqMessage> {
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
     @Override
     public void send(RabbitMqMessage rabbitMqMessage) {
+        //暂时不知道signId要拿过来作什么
+        String signId = rabbitMqMessage.getSignId();
         rabbitTemplate.convertAndSend(rabbitMqMessage.getExchange(), rabbitMqMessage.getRoutingKey(), rabbitMqMessage.getO());
     }
 

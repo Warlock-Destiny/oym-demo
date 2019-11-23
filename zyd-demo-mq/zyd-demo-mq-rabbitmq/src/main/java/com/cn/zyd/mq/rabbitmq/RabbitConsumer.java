@@ -1,6 +1,10 @@
-package com.cn.zyd.mq;
+package com.cn.zyd.mq.rabbitmq;
 
-import com.cn.zyd.mq.model.RabbitMqCallback;
+import com.cn.zyd.mq.BaseConsumer;
+import com.cn.zyd.mq.MqClientAdapter;
+import com.cn.zyd.mq.model.MqSuit;
+import com.cn.zyd.mq.rabbitmq.model.RabbitMqCallback;
+import com.cn.zyd.mq.rabbitmq.model.RabbitMqSuit;
 import com.rabbitmq.client.AMQP;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DefaultConsumer;
@@ -20,19 +24,19 @@ import java.util.function.Consumer;
  */
 @Slf4j
 @Service
-public class RabbitConsumer extends RabbitMqClient implements BaseConsumer<RabbitMqCallback> {
+public class RabbitConsumer extends MqClientAdapter implements BaseConsumer<RabbitMqSuit, RabbitMqCallback> {
 
     @Autowired
     private ConnectionFactory connectionFactory;
 
     @Override
-    public void consumer(String queue, Consumer<RabbitMqCallback> consumer) {
+    public void consumer(RabbitMqSuit suit, Consumer<RabbitMqCallback> consumer) {
         try {
             Channel channel = connectionFactory
                     .createConnection()
                     .createChannel(false);
             channel.basicConsume(
-                    queue,
+                    suit.getQueue(),
                     false,
                     new SimpleConsumer(channel, consumer)
             );

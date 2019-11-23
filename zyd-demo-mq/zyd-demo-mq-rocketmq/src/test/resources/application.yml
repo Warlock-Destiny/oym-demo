@@ -1,0 +1,12 @@
+# web port
+server:
+  port: 8081
+
+spring:
+  rocketmq:
+    host: 127.0.0.1
+    port: 9876
+    hasProducer: true
+    hasConsumer: true
+    producerGroup: zyd
+    consumerGroup: zyd1

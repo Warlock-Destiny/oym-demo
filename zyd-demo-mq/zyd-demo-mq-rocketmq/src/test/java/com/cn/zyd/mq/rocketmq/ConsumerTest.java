@@ -1,9 +1,7 @@
-package com.cn.zyd.mq.rabbitmq;
+package com.cn.zyd.mq.rocketmq;
 
-import com.cn.zyd.mq.BaseConsumer;
 import com.cn.zyd.mq.Main;
-import com.cn.zyd.mq.rabbitmq.model.RabbitMqCallback;
-import com.cn.zyd.mq.rabbitmq.model.RabbitMqSuit;
+import com.cn.zyd.mq.rocketmq.config.RocketMqSuit;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,19 +17,20 @@ import java.nio.charset.StandardCharsets;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Main.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
-public class SimpleConsumerTest {
+public class ConsumerTest {
 
     @Autowired
-    private RabbitConsumer baseConsumer;
+    private RocketConsumer rocketConsumer;
 
     @Test
     public void testConsumer() throws InterruptedException {
-        RabbitMqSuit rabbitMqSuit = new RabbitMqSuit();
-        rabbitMqSuit.setQueue("zyd");
-        baseConsumer.consumer(rabbitMqSuit, x -> {
+        RocketMqSuit rocketMqSuit = new RocketMqSuit();
+        rocketMqSuit.setTopic("topic1");
+        rocketMqSuit.setTags("*");
+        rocketConsumer.consumer(rocketMqSuit, x -> {
             String msg = new String(x.getBytes(), StandardCharsets.UTF_8);
             System.out.println(msg);
         });
-        Thread.sleep(10000L);
+        Thread.sleep(30000L);
     }
 }

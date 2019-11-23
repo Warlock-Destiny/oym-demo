@@ -1,13 +1,14 @@
-package com.cn.zyd.mq.rabbitmq;
+package com.cn.zyd.mq.rocketmq;
 
-import com.cn.zyd.mq.BaseProducer;
 import com.cn.zyd.mq.Main;
-import com.cn.zyd.mq.rabbitmq.model.RabbitMqMessage;
+import com.cn.zyd.mq.rocketmq.model.RocketMqMessage;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author zyd
@@ -16,17 +17,16 @@ import org.springframework.test.context.junit4.SpringRunner;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = Main.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
-public class SimpleProducerTest {
+public class ProducerTest {
 
     @Autowired
-    private BaseProducer<RabbitMqMessage> baseProducer;
+    private RocketProducer baseProducer;
 
     @Test
     public void testSend() {
-        RabbitMqMessage rabbitMqMessage = new RabbitMqMessage();
-        rabbitMqMessage.setExchange("fanout");
-        rabbitMqMessage.setRoutingKey("");
-        rabbitMqMessage.setO("救命啊,我变成一条狗了");
-        baseProducer.send(rabbitMqMessage);
+        RocketMqMessage rocketMqMessage = new RocketMqMessage();
+        rocketMqMessage.setTopic("topic1");
+        rocketMqMessage.setBytes("救命啊，我变成一条狗了!".getBytes(StandardCharsets.UTF_8));
+        baseProducer.send(rocketMqMessage);
     }
 }

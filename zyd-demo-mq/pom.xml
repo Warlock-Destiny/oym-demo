@@ -13,6 +13,7 @@
     <modules>
         <module>zyd-demo-mq-base</module>
         <module>zyd-demo-mq-rabbitmq</module>
+        <module>zyd-demo-mq-rocketmq</module>
     </modules>
 
 </project>

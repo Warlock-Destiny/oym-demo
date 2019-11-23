@@ -1,4 +1,4 @@
-package com.cn.zyd.mq.model;
+package com.cn.zyd.mq.rabbitmq.model;
 
 import com.cn.zyd.mq.model.MqMessage;
 import lombok.Data;
