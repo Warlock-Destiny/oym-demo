@@ -23,6 +23,7 @@
         <module>zyd-demo-base</module>
         <module>zyd-demo-auth</module>
         <module>zyd-demo-mq</module>
+        <module>zyd-demo-common</module>
     </modules>
 
     <dependencies>

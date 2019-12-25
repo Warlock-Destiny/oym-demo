@@ -1,5 +1,6 @@
 package com.cn.zyd.base.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -43,9 +44,12 @@ public class Result<T> implements Serializable {
         return this;
     }
 
+    @JsonIgnore
     public boolean isOK() {
         return this.code == OK;
     }
+
+    @JsonIgnore
     public boolean isFail() {
         return this.code == FAIL;
     }

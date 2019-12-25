@@ -1,8 +1,6 @@
 package com.cn.zyd.mq.rabbitmq;
 
-import com.cn.zyd.mq.BaseConsumer;
 import com.cn.zyd.mq.Main;
-import com.cn.zyd.mq.rabbitmq.model.RabbitMqCallback;
 import com.cn.zyd.mq.rabbitmq.model.RabbitMqSuit;
 import org.junit.Test;
 import org.junit.runner.RunWith;

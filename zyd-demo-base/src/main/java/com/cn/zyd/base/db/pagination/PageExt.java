@@ -8,7 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * @author zyd
  * @date 2019/11/5 15:40
- * @desc 分页模型扩展类
+ * @desc 分页模型扩展类 原先不适合排序
  */
 public class PageExt<T> extends Page<T> {
 
@@ -31,7 +31,7 @@ public class PageExt<T> extends Page<T> {
         super(current, size, total, isSearchCount);
     }
 
-    public PageExt addOrder(String column, String sort) {
+    public PageExt<T> addOrder(String column, String sort) {
         if (StringUtils.isEmpty(sort)) {
             return this;
         }

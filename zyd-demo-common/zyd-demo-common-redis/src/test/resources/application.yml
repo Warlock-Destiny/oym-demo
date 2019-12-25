@@ -1,0 +1,13 @@
+##如果要使用邮件功能 可以在项目配置文件配置上这部分内容
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    database: 0
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 6000
+        max-wait: 1000
+        max-idle: 400
