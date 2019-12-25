@@ -1,6 +1,5 @@
 package com.cn.zyd.activiti.dto;
 
-
 import com.cn.zyd.base.model.BaseDto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

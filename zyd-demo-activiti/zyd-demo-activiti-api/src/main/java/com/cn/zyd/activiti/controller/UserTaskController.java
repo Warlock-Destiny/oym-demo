@@ -4,8 +4,9 @@ import com.cn.zyd.activiti.dto.CompleteTaskDto;
 import com.cn.zyd.activiti.dto.HisTaskDto;
 import com.cn.zyd.activiti.dto.TaskDto;
 import com.cn.zyd.activiti.service.UserTaskService;
-import com.cn.zyd.base.controller.BaseController;
 import com.cn.zyd.base.model.Result;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModelProperty;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,8 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("task")
-public class UserTaskController extends BaseController {
+@Api("任务控制层")
+public class UserTaskController {
 
     @Autowired
     private UserTaskService userTaskService;
@@ -32,7 +34,7 @@ public class UserTaskController extends BaseController {
     }
 
     @PostMapping("completeTask")
-    public Result completeTask(
+    public Result<Void> completeTask(
             @RequestBody CompleteTaskDto completeTaskDto) {
         userTaskService.completeTask(completeTaskDto);
         return Result.ok();
@@ -62,6 +64,24 @@ public class UserTaskController extends BaseController {
     ) {
         userTaskService.setAssignUser(toUserId, comment, taskId);
         return Result.ok();
+    }
+
+    @PostMapping("continueProcess")
+    public Result<Void> continueProcess(
+            @RequestParam("processInstanceId") String processInstanceId,
+            @RequestParam("comment") String comment
+    ) {
+        userTaskService.completeAllTaskByProcessId(processInstanceId, comment);
+        return Result.ok();
+    }
+
+    @PostMapping("revoke")
+    @ApiModelProperty("撤销任务")
+    public Result<Void> revoke(
+            @RequestParam("hisTaskId") String hisTaskId,
+            @RequestParam("userId") String userId
+    ) {
+        return userTaskService.revoke(hisTaskId, userId);
     }
 
 }

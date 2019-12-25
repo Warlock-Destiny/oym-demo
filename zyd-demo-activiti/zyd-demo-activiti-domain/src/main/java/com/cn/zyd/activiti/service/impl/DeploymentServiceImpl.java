@@ -173,7 +173,6 @@ public class DeploymentServiceImpl implements DeploymentService {
         });
         entityModel.setColumns(fieldList);
         return SqlBuilder.newInstance(db, table, entityModel, actReDeploymentMap);
-
     }
 
 }

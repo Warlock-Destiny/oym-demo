@@ -4,6 +4,7 @@ package com.cn.zyd.activiti.service;
 import com.cn.zyd.activiti.dto.CompleteTaskDto;
 import com.cn.zyd.activiti.dto.HisTaskDto;
 import com.cn.zyd.activiti.dto.TaskDto;
+import com.cn.zyd.base.model.Result;
 
 import java.util.List;
 
@@ -24,7 +25,6 @@ public interface UserTaskService {
 
     /**
      * 完成任务
-     *
      */
     void completeTask(CompleteTaskDto completeTaskDto);
 
@@ -43,6 +43,16 @@ public interface UserTaskService {
      * 转交任务
      */
     void setAssignUser(String toUserId, String comment, String taskId);
+
+    /**
+     * 结束所有的任务
+     */
+    void completeAllTaskByProcessId(String processInstantId, String comment);
+
+    /**
+     * 撤销功能 撤销功能只能将流程的下一步转移到上一步 如果业务出现任务移交的情况需要业务自己做处理
+     */
+    Result<Void> revoke(String hisTaskId, String userId);
 
 
 }

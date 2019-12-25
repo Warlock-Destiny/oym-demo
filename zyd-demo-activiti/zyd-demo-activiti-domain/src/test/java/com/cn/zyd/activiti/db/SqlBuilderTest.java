@@ -1,4 +1,4 @@
-package com.ctff.cloud.activiti.db;
+package com.cn.zyd.activiti.db;
 
 import com.cn.zyd.activiti.db.EntityModel;
 import com.cn.zyd.activiti.db.SqlBuilder;

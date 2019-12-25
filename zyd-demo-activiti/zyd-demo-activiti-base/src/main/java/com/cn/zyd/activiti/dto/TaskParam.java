@@ -9,6 +9,13 @@ import java.util.HashMap;
  */
 public class TaskParam extends HashMap<String, Object> {
 
+    public TaskParam() {
+    }
+
+    public TaskParam(String key, Object value) {
+        putAndReturn(key, value);
+    }
+
     public TaskParam putAndReturn(String key, Object value) {
         put(key, value);
         return this;

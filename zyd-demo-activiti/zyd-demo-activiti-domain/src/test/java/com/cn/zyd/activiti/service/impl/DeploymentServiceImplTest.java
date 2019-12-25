@@ -1,4 +1,4 @@
-package com.ctff.cloud.activiti.service.impl;
+package com.cn.zyd.activiti.service.impl;
 
 import com.cn.zyd.activiti.service.impl.DeploymentServiceImpl;
 import org.junit.Test;

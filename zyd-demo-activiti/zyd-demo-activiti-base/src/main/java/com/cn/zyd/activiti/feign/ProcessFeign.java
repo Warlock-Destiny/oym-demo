@@ -16,7 +16,7 @@ import java.util.List;
  * @date 2019/10/9 17:12
  * @desc
  */
-@FeignClient(name = "ctff-cloud-activiti", path = "/process")
+@FeignClient(name = "zyd-demo-activiti", path = "/process")
 public interface ProcessFeign {
 
     @PostMapping("start")
