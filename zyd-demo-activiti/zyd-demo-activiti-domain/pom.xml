@@ -19,7 +19,7 @@
         </dependency>
         <dependency>
             <groupId>com.cn</groupId>
-            <artifactId>zyd-demo-common</artifactId>
+            <artifactId>zyd-demo-base</artifactId>
             <version>1.0.0</version>
         </dependency>
         <dependency>

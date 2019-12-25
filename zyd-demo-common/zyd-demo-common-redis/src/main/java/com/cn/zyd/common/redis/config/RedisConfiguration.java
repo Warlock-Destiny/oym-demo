@@ -21,12 +21,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 public class RedisConfiguration {
 
     @Bean
-    @ConditionalOnBean(RedisTemplate.class)
-    public RedisService redisService() {
-        return new RedisService();
-    }
-
-    @Bean
     public RedisTemplate<String, Object> redisTemplate(RedisConnectionFactory redisConnectionFactory) {
         RedisTemplate<String, Object> redisTemplate = new RedisTemplate<>();
         redisTemplate.setConnectionFactory(redisConnectionFactory);
@@ -36,4 +30,11 @@ public class RedisConfiguration {
         redisTemplate.setHashValueSerializer(new JdkSerializationRedisSerializer());
         return redisTemplate;
     }
+
+    @Bean
+    @ConditionalOnBean(RedisTemplate.class)
+    public RedisService redisService() {
+        return new RedisService();
+    }
+
 }

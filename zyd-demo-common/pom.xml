@@ -12,9 +12,9 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>zyd-demo-common-util</module>
         <module>zyd-demo-common-redis</module>
         <module>zyd-demo-common-mail</module>
+        <module>zyd-demo-common-util</module>
     </modules>
 
 </project>

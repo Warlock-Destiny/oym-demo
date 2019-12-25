@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @desc
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(classes = TestMail.class)
 public class RedisServiceTest {
     @Autowired
     private RedisService redisService;
@@ -23,5 +23,7 @@ public class RedisServiceTest {
         System.out.println(redisService.tryLock("key1", "111", 200000));
         System.out.println(redisService.tryUnLock("key1", "111"));
     }
+
+
 
 }
