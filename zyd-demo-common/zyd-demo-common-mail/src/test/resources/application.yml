@@ -1,11 +1,11 @@
 ##如果要使用邮件功能 可以在项目配置文件配置上这部分内容
 spring:
   mail:
-    host: mail.qq.cn
+    host:
     username:
-    password: ##待输入
+    password:
     default-encoding: utf-8
-    from: zhangyd@ffcs.cn
+    from:
     #以上部分可以重写
     #SSLSocket
     properties:
