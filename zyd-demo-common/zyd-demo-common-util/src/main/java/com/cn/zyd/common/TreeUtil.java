@@ -134,7 +134,6 @@ public final class TreeUtil {
 
     /**
      * @param b2e b 返回值 e父item e2 子组件处理
-     * @return
      */
     private static <T, E extends TreeModel<T, E>, B> E recuit(
             T pid,
