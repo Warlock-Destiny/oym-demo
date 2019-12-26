@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/ctff-cloud?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/zyd-cloud?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
     username: root
     password: 123456
     platform: mysql
@@ -48,7 +48,7 @@ mybatis-plus:
 ribbon:
   eager-load:
     enabled: true
-    clients: ctff-cloud-microservice-consumer-user
+    clients: zyd-demo
   #请求处理的超时时间
   ReadTimeout: 4000
   #请求连接的超时时间
@@ -69,7 +69,7 @@ feign:
 security:
   oauth2:
     resource:
-      id: ctff-cloud-mircoservice-consumer-user
+      id: zyd-demo
       #指定用户信息地址
       user-info-uri: http://127.0.0.1/api/auth/user
       prefer-token-info: false

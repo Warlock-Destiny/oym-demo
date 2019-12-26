@@ -9,8 +9,6 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @ComponentScan("com.cn")
 @MapperScan("com.cn.zyd.activiti.dao")
-//@EnableDiscoveryClient
-//@EnableFeignClients(basePackages = {"com.ctff.cloud.activiti.feign"})
 public class Main {
     public static void main(String[] args) {
         SpringApplication.run(Test.class, args);

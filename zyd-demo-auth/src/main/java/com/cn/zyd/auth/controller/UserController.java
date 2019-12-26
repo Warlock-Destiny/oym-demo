@@ -1,5 +1,8 @@
 package com.cn.zyd.auth.controller;
 
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,10 +13,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @desc
  */
 @RestController
-@RequestMapping("/user")
+@RequestMapping(value = "/")
+@Slf4j
 public class UserController {
-    @GetMapping
-    public String getUsers() {
-        return "Hello Spring Security";
+
+    /**
+     * @description 资源服务器可通过请求user接口essToken对应的用户信息
+     */
+    @GetMapping(value = "user")
+    public Authentication user() {
+        return SecurityContextHolder.getContext().getAuthentication();
     }
+
 }

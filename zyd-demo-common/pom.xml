@@ -16,6 +16,7 @@
         <module>zyd-demo-common-mail</module>
         <module>zyd-demo-common-util</module>
         <module>zyd-demo-common-swagger</module>
+        <module>zyd-demo-common-auth</module>
     </modules>
 
 </project>

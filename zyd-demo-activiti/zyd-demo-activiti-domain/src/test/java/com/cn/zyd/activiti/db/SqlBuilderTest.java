@@ -23,7 +23,7 @@ public class SqlBuilderTest {
         map.put("delete_status", 0);
         map.put("gmt_create", new Date());
         map.put("gmt_modified", new Date());
-        String sql = SqlBuilder.newInstance("ctff-cloud", "sys_dict", entityModel, map).buildInsertSql();
+        String sql = SqlBuilder.newInstance("zyd", "sys_dict", entityModel, map).buildInsertSql();
         System.out.println(sql);
     }
 
@@ -40,7 +40,7 @@ public class SqlBuilderTest {
         map.put("delete_status", 0);
         map.put("gmt_create", new Date());
         map.put("gmt_modified", new Date());
-        String sql = SqlBuilder.newInstance("ctff-cloud", "sys_dict", entityModel, map).buildDeleteSql();
+        String sql = SqlBuilder.newInstance("zyd", "sys_dict", entityModel, map).buildDeleteSql();
         System.out.println(sql);
     }
 
