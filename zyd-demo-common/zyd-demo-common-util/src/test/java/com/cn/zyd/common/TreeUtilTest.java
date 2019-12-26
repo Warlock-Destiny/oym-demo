@@ -1,7 +1,10 @@
-package com.cn.zyd.common.util;
+package com.cn.zyd.common;
 
 import com.cn.zyd.common.util.model.TreeModel;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import lombok.experimental.Accessors;
 import org.junit.Test;
@@ -30,16 +33,22 @@ public class TreeUtilTest {
         testClassList.add(new TestClass(10L, 3L, "珠海", "啊啊啊3"));
         List<TestTree> list = TreeUtil.buildListTree(0L, null, testClassList, TestClass::getPid, x -> {
             TestTree testTree = new TestTree();
-            testTree.setId(x.getId());
-            testTree.setPid(x.getPid());
+            testTree.setSign(x.getId());
+            testTree.setPSign(x.getPid());
             testTree.setContext(x.getRemark());
             testTree.setName(x.getName());
             return testTree;
         });
-        System.out.println(list);
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            System.out.println(mapper.writeValueAsString(list));
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
     }
 
     @Data
+    @EqualsAndHashCode(callSuper = true)
     @Accessors(chain = true)
     public static class TestTree extends TreeModel<Long, TestTree> {
         private String name;

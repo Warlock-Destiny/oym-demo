@@ -1,6 +1,5 @@
 package com.cn.zyd.activiti.scene;
 
-import com.alibaba.fastjson.JSON;
 import com.cn.zyd.activiti.dto.CompleteTaskDto;
 import com.cn.zyd.activiti.dto.ProcessStartDto;
 import com.cn.zyd.activiti.dto.TaskParam;
@@ -121,9 +120,9 @@ public class WithdrawTest {
      */
     @Test
     public void queryMyTask() {
-        System.out.println(JSON.toJSONString(userTaskService.queryTaskByUser("张三", 0, 10)));
-        System.out.println(JSON.toJSONString(userTaskService.queryHistoryTask("张三", 0, 10)));
-        System.out.println(JSON.toJSONString(userTaskService.queryHisComment("张三","4b37c3a4-26f5-11ea-9d17-3c918097a91a")));
+        System.out.println(userTaskService.queryTaskByUser("张三", 0, 10));
+        System.out.println(userTaskService.queryHistoryTask("张三", 0, 10));
+        System.out.println(userTaskService.queryHisComment("张三","4b37c3a4-26f5-11ea-9d17-3c918097a91a"));
     }
 
     /**

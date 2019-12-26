@@ -1,4 +1,4 @@
-package com.cn.zyd.common.util;
+package com.cn.zyd.common;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
@@ -19,7 +19,10 @@ import java.util.stream.Collectors;
  * @desc 对象拷贝
  */
 @Slf4j
-public class BeanUtil extends BeanUtils {
+public final class BeanUtil extends BeanUtils {
+
+    private BeanUtil() {
+    }
 
     /**
      * @param s source
@@ -27,7 +30,14 @@ public class BeanUtil extends BeanUtils {
      * @return target
      */
     public static <S, T> T copy(S s, T t) {
-        BeanUtils.copyProperties(s, t);
+        if (s == null) {
+            return null;
+        }
+        if (s instanceof Map) {
+            copyMap((Map<String, Object>) s, t);
+        } else {
+            BeanUtils.copyProperties(s, t);
+        }
         return t;
     }
 

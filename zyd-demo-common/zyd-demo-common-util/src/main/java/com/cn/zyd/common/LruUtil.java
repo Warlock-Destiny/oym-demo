@@ -1,4 +1,4 @@
-package com.cn.zyd.common.util;
+package com.cn.zyd.common;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -8,7 +8,10 @@ import java.util.Map;
  * @date 2019/11/15 10:21
  * @desc 最近访问最常使用算法
  */
-public class LruUtil<K, V> {
+public final class LruUtil<K, V> {
+
+    private LruUtil() {
+    }
 
     private Map<K, Node<K, V>> nodeMap;
     private int capacity;

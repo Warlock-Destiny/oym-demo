@@ -1,6 +1,6 @@
-package com.cn.zyd.common.config;
+package com.cn.zyd.common.util.config;
 
-import com.cn.zyd.common.spring.SpringContextHolder;
+import com.cn.zyd.common.util.spring.SpringContextHolder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
