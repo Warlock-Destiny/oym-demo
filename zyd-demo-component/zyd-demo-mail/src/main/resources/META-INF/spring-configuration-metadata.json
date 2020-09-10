@@ -1,0 +1,13 @@
+{
+  "groups": [
+  ],
+  "properties": [
+    {
+      "name": "component.mail",
+      "type": "java.lang.Boolean",
+      "description": "是否启动mail",
+      "defaultValue": false
+    }
+  ],
+  "hints": []
+}

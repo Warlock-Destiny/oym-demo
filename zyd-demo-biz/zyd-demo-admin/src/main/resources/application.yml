@@ -1,0 +1,21 @@
+server:
+  port: 9800
+
+management:
+  endpoint:
+    info:
+      enabled: true
+    health:
+      enabled: true
+      show-details: always
+spring:
+  cloud:
+    nacos:
+      discovery:
+        metadata:
+          user.name: ${spring.security.user.name}
+          user.password: ${spring.security.user.password}
+  security:
+    user:
+      name: ctff
+      password: ffcs.123

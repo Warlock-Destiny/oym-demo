@@ -1,0 +1,33 @@
+package ${package}.${moduleName}.dao;
+
+import ${package}.${moduleName}.entity.${className};
+
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.ctff.cloud.common.base.db.dao.BaseDao;
+import com.ctff.cloud.common.base.model.BaseQuery;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+import java.util.Map;
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+@Repository
+public interface ${className}Dao extends BaseDao<${className}> {
+
+    void batchInsert(@Param("items") List<${className}> list);
+
+    default IPage<Map<String, Object>> listByPage(BaseQuery query) {
+        IPage<Map<String, Object>> iPage = query2IPage(query);
+        List<Map<String, Object>> list = list(iPage, query);
+        return iPage.setRecords(list);
+    }
+
+    List<Map<String, Object>> list(IPage<Map<String, Object>> iPage, @Param("query") BaseQuery query);
+}

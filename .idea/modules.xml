@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo.iml" filepath="$PROJECT_DIR$/zyd-demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-biz/zyd-demo-activiti/zyd-demo-activiti.iml" filepath="$PROJECT_DIR$/zyd-demo-biz/zyd-demo-activiti/zyd-demo-activiti.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-biz/zyd-demo-activiti/zyd-demo-activiti-api/zyd-demo-activiti-api.iml" filepath="$PROJECT_DIR$/zyd-demo-biz/zyd-demo-activiti/zyd-demo-activiti-api/zyd-demo-activiti-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-biz/zyd-demo-activiti/zyd-demo-activiti-base/zyd-demo-activiti-base.iml" filepath="$PROJECT_DIR$/zyd-demo-biz/zyd-demo-activiti/zyd-demo-activiti-base/zyd-demo-activiti-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-biz/zyd-demo-activiti/zyd-demo-activiti-domain/zyd-demo-activiti-domain.iml" filepath="$PROJECT_DIR$/zyd-demo-biz/zyd-demo-activiti/zyd-demo-activiti-domain/zyd-demo-activiti-domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-biz/zyd-demo-admin/zyd-demo-admin.iml" filepath="$PROJECT_DIR$/zyd-demo-biz/zyd-demo-admin/zyd-demo-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-biz/zyd-demo-auth/zyd-demo-auth.iml" filepath="$PROJECT_DIR$/zyd-demo-biz/zyd-demo-auth/zyd-demo-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-base/zyd-demo-base.iml" filepath="$PROJECT_DIR$/zyd-demo-base/zyd-demo-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-biz/zyd-demo-biz.iml" filepath="$PROJECT_DIR$/zyd-demo-biz/zyd-demo-biz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-component/zyd-demo-common-auth/zyd-demo-common-auth.iml" filepath="$PROJECT_DIR$/zyd-demo-component/zyd-demo-common-auth/zyd-demo-common-auth.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-component/zyd-demo-common-feign/zyd-demo-common-feign.iml" filepath="$PROJECT_DIR$/zyd-demo-component/zyd-demo-common-feign/zyd-demo-common-feign.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-component/zyd-demo-common-swagger/zyd-demo-common-swagger.iml" filepath="$PROJECT_DIR$/zyd-demo-component/zyd-demo-common-swagger/zyd-demo-common-swagger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-component/zyd-demo-component.iml" filepath="$PROJECT_DIR$/zyd-demo-component/zyd-demo-component.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-biz/zyd-demo-gateway/zyd-demo-gateway.iml" filepath="$PROJECT_DIR$/zyd-demo-biz/zyd-demo-gateway/zyd-demo-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-biz/zyd-demo-gateway/zyd-demo-gateway-gateway/zyd-demo-gateway-gateway.iml" filepath="$PROJECT_DIR$/zyd-demo-biz/zyd-demo-gateway/zyd-demo-gateway-gateway/zyd-demo-gateway-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-biz/zyd-demo-gateway/zyd-demo-gateway-zuul/zyd-demo-gateway-zuul.iml" filepath="$PROJECT_DIR$/zyd-demo-biz/zyd-demo-gateway/zyd-demo-gateway-zuul/zyd-demo-gateway-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-biz/zyd-demo-generate/zyd-demo-generate.iml" filepath="$PROJECT_DIR$/zyd-demo-biz/zyd-demo-generate/zyd-demo-generate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-component/zyd-demo-mail/zyd-demo-mail.iml" filepath="$PROJECT_DIR$/zyd-demo-component/zyd-demo-mail/zyd-demo-mail.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-component/zyd-demo-mq/zyd-demo-mq.iml" filepath="$PROJECT_DIR$/zyd-demo-component/zyd-demo-mq/zyd-demo-mq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-component/zyd-demo-mq/zyd-demo-mq-base/zyd-demo-mq-base.iml" filepath="$PROJECT_DIR$/zyd-demo-component/zyd-demo-mq/zyd-demo-mq-base/zyd-demo-mq-base.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-component/zyd-demo-mq/zyd-demo-mq-rabbitmq/zyd-demo-mq-rabbitmq.iml" filepath="$PROJECT_DIR$/zyd-demo-component/zyd-demo-mq/zyd-demo-mq-rabbitmq/zyd-demo-mq-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-component/zyd-demo-mq/zyd-demo-mq-rocketmq/zyd-demo-mq-rocketmq.iml" filepath="$PROJECT_DIR$/zyd-demo-component/zyd-demo-mq/zyd-demo-mq-rocketmq/zyd-demo-mq-rocketmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-component/zyd-demo-mybatis-plus/zyd-demo-mybatis-plus.iml" filepath="$PROJECT_DIR$/zyd-demo-component/zyd-demo-mybatis-plus/zyd-demo-mybatis-plus.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-component/zyd-demo-redis/zyd-demo-redis.iml" filepath="$PROJECT_DIR$/zyd-demo-component/zyd-demo-redis/zyd-demo-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zyd-demo-component/zyd-demo-web/zyd-demo-web.iml" filepath="$PROJECT_DIR$/zyd-demo-component/zyd-demo-web/zyd-demo-web.iml" />
+    </modules>
+  </component>
+</project>

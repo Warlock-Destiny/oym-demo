@@ -1,0 +1,31 @@
+package ${package}.${moduleName}.service.impl;
+
+import com.ctff.cloud.common.base.model.PageWrapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Map;
+
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import ${mainPath}.common.utils.PageUtils;
+import ${mainPath}.common.utils.Query;
+
+import ${package}.${moduleName}.dao.${className}Dao;
+import ${package}.${moduleName}.entity.${className}Entity;
+import ${package}.${moduleName}.service.${className}Service;
+
+@Service
+public class ${dtoName}ServiceImpl implements ${dtoName}Service {
+
+    @Autowired
+    private ${className}Dao ${classname}dao;
+
+    @Override
+    public PageWrapper<${dtoName}ExtDto> list(${dtoName}Query query) {
+        IPage<Map<String, Object>> iPage = ${classname}dao.listByPage(query);
+        return PageWrapper.data(0, null);
+    }
+
+}

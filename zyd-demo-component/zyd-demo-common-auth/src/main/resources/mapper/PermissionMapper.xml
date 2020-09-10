@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cn.zyd.common.auth.dao.PermissionDao">
+
+    <select id="findAll" resultType="com.cn.zyd.common.auth.model.Permission">
+        SELECT
+            sm.id,
+            sm.parent_id,
+            sr.role_sign as name,
+            sm.url,
+            sm.type,
+            sm.icon,
+            sm.order_num,
+            sm.gmt_create,
+            sm.gmt_modified
+        FROM
+            zyd_cloud.sys_menu AS sm
+            INNER JOIN zyd_cloud.sys_role_menu AS srm ON sm.id = srm.menu_id
+            INNER JOIN zyd_cloud.sys_role AS sr ON srm.role_id = sr.id
+    </select>
+
+    <select id="findByUserId" resultType="com.cn.zyd.common.auth.model.Permission">
+        SELECT
+            p.menu_id,
+            p.parent_id,
+            p.`name`,
+            p.url,
+            p.type,
+            p.icon,
+            p.order_num,
+            p.gmt_create,
+            p.gmt_modified
+        FROM
+            zyd_cloud.sys_user AS u
+            LEFT JOIN zyd_cloud.sys_user_role AS sru ON u.user_id = sru.user_id
+            LEFT JOIN zyd_cloud.sys_role AS r ON sru.role_id = r.id
+            LEFT JOIN zyd_cloud.sys_role_menu AS spr ON spr.role_id = r.id
+            LEFT JOIN zyd_cloud.sys_menu AS p ON p.menu_id = spr.menu_id
+        WHERE
+            u.user_id = #{value}
+    </select>
+
+
+</mapper>

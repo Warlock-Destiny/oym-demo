@@ -1,0 +1,18 @@
+package ${package}.${moduleName}.service;
+
+import com.ctff.cloud.common.base.model.PageWrapper;
+
+import java.util.Map;
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+public interface ${dtoName}Service {
+
+    PageWrapper<${dtoName}ExtDto> list(${dtoName}Query query);
+}
+

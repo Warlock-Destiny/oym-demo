@@ -1,0 +1,24 @@
+package ${package}.${moduleName}.query;
+
+import com.ctff.cloud.common.base.model.BaseQuery;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+import lombok.experimental.Accessors;
+
+import com.ctff.cloud.common.base.model.BaseDto;
+
+
+/**
+ * ${comments}
+ * 
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+@Data
+@ApiModel("")
+@EqualsAndHashCode(callSuper = true)
+public class ${dtoName}Query extends BaseQuery {
+
+}
