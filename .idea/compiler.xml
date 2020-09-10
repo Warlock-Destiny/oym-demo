@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zyd-demo-base" />
+        <module name="zyd-demo-common-swagger" />
+        <module name="zyd-demo-gateway-gateway" />
+        <module name="zyd-demo-activiti-base" />
+        <module name="zyd-demo-activiti-domain" />
+        <module name="zyd-demo-admin" />
+        <module name="zyd-demo-mq-rocketmq" />
+        <module name="zyd-demo-web" />
+        <module name="zyd-demo-activiti-api" />
+        <module name="zyd-demo-mq-base" />
+        <module name="zyd-demo-common-auth" />
+        <module name="zyd-demo-mail" />
+        <module name="zyd-demo-mybatis-plus" />
+        <module name="zyd-demo-generate" />
+        <module name="zyd-demo-redis" />
+        <module name="zyd-demo-mq-rabbitmq" />
+        <module name="zyd-demo-auth" />
+        <module name="zyd-demo-gateway-zuul" />
+        <module name="zyd-demo-common-feign" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="zyd-demo" target="1.8" />
+      <module name="zyd-demo-activiti" target="1.8" />
+      <module name="zyd-demo-activiti-api" target="1.8" />
+      <module name="zyd-demo-activiti-base" target="1.8" />
+      <module name="zyd-demo-activiti-domain" target="1.8" />
+      <module name="zyd-demo-admin" target="1.8" />
+      <module name="zyd-demo-auth" target="1.8" />
+      <module name="zyd-demo-base" target="1.8" />
+      <module name="zyd-demo-biz" target="1.8" />
+      <module name="zyd-demo-common-auth" target="1.5" />
+      <module name="zyd-demo-common-feign" target="1.5" />
+      <module name="zyd-demo-common-swagger" target="1.5" />
+      <module name="zyd-demo-component" target="1.8" />
+      <module name="zyd-demo-gateway" target="1.8" />
+      <module name="zyd-demo-gateway-gateway" target="1.8" />
+      <module name="zyd-demo-gateway-zuul" target="1.8" />
+      <module name="zyd-demo-generate" target="1.8" />
+      <module name="zyd-demo-mail" target="1.8" />
+      <module name="zyd-demo-mq" target="1.8" />
+      <module name="zyd-demo-mq-base" target="1.8" />
+      <module name="zyd-demo-mq-rabbitmq" target="1.8" />
+      <module name="zyd-demo-mq-rocketmq" target="1.8" />
+      <module name="zyd-demo-mybatis-plus" target="1.8" />
+      <module name="zyd-demo-redis" target="1.8" />
+      <module name="zyd-demo-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

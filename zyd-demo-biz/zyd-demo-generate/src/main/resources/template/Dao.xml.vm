@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="${package}.${moduleName}.dao.${className}Dao">
+
+    <sql id="sql">
+#foreach ($column in $columns)
+        $column.columnName#if($foreach.hasNext),#end
+
+#end
+    </sql>
+
+    <insert id="batchInsert" parameterType="${package}.${moduleName}.entity.${className}">
+        INSERT INTO ${tableName} (
+#foreach ($column in $columns)
+#if($!column.batchInsertShow)
+            $column.columnName#if($foreach.hasNext),#end
+
+#end
+#end
+        ) VALUES
+        <foreach collection="items" item="item" separator=",">
+        (
+#foreach ($column in $columns)
+#if($!column.batchInsertShow)
+            #{item.${column.attrname}}#if($foreach.hasNext),#end
+
+#end
+#end
+        )
+        </foreach>
+    </insert>
+
+    <!-- 通常用于连表查询,查出map再通过beanUtil转成相应对象 -->
+    <select id="list" resultType="java.util.Map">
+        select
+#foreach ($column in $columns)
+            $column.columnName as $column.attrname#if($foreach.hasNext),#end
+
+#end
+        from ${tableName}
+    </select>
+
+</mapper>

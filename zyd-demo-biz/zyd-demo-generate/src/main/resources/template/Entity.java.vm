@@ -1,0 +1,45 @@
+package ${package}.${moduleName}.entity;
+
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+
+import lombok.Data;
+#if(${hasSuper})
+import lombok.EqualsAndHashCode;
+#end
+import lombok.experimental.Accessors;
+import ${import}
+
+#if(${hasBigDecimal})
+import java.math.BigDecimal;
+#end
+import java.util.Date;
+
+/**
+ * ${comments}
+ * 
+ * @author ${author}
+ * @email ${email}
+ * @date ${datetime}
+ */
+@Data
+@Accessors(chain = true)
+#if(${hasSuper})
+@EqualsAndHashCode(callSuper = true)
+#end
+@TableName("${tableName}")
+public class ${className} ${implement} {
+
+#foreach ($column in $columns)
+	public static final String $column.topName = "$column.columnName";
+#end
+
+#foreach ($column in $columns)
+#if($!column.entityShow)
+	// $column.comments
+	@TableField($column.topName)
+	private $column.attrType $column.attrname;
+#end
+#end
+
+}

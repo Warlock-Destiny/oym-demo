@@ -1,0 +1,20 @@
+server:
+  port: 80
+#zuul网关配置
+#zuul网关配置
+zuul:
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+  #ignoredPatterns: /**/admin/**   # 忽略所有包含/admin/的路径
+  #可忽略指定服务，多服务,分割，*为所有服务，当所有服务被忽略，但存在route时，只有route指定的微服务生效
+  ignored-services: '*'
+  prefix: /api
+  sensitiveHeaders: '*'
+  routes:
+    #服务映射，服务名： 映射地址，或者用下面的方式
+    zyd-demo-activiti: /activiti/**
+    zyd-demo-server: /auth/**
+
+  #添加代理头
+  add-proxy-headers: true
