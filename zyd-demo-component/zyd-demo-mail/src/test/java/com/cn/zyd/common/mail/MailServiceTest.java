@@ -16,7 +16,7 @@ public class MailServiceTest {
 
     @Test
     public void testSendMail() {
-        mailService.sendSimpleMail("zhangyd@ffcs.cn", "zhangyd@ffcs.cn", "测试邮件", "测试邮件内容");
+        mailService.sendSimpleMail("zhangyd@xxx.cn", "zhangyd@xxx.cn", "测试邮件", "测试邮件内容");
     }
 
 }
