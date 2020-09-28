@@ -12,7 +12,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>zyd-demo-common-util</module>
+        <module>zyd-demo-util</module>
         <module>zyd-demo-common-swagger</module>
         <module>zyd-demo-common-auth</module>
         <module>zyd-demo-common-feign</module>

@@ -9,7 +9,6 @@ import com.cn.generate.entity.Table;
 import com.cn.generate.model.ColumnModel;
 import com.cn.generate.model.TableModel;
 import com.cn.generate.utils.GenUtils;
-import jdk.internal.org.jline.utils.Log;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +46,6 @@ public class GeneratorService {
             String key = getKey(table.getTableSchema(), table.getTableName());
             List<Column> tableColumnList = columnMap.get(key);
             if (tableColumnList == null || tableColumnList.isEmpty()) {
-                Log.warn("表:{},没有column", key);
                 return null;
             }
             TableModel tableModel = convertTable(table);
