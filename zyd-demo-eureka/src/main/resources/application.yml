@@ -1,9 +1,11 @@
 server:
-  port: 9090
+  port: 80
+
 eureka:
   instance:
-    hostname: eureka-server
+    hostname: localhost
   client:
-    service-url:
-      defaultZone: http://127.0.0.1:9090/eureka
-    register-with-eureka: false
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/

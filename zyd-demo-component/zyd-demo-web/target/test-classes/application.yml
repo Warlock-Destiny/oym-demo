@@ -1,7 +1,0 @@
-##如果要使用邮件功能 可以在项目配置文件配置上这部分内容
-server:
-  port: 80
-component:
-  web:
-    default:
-      log:  true
