@@ -1,7 +1,9 @@
 #appId 同来区别不同的配置
 
 #apollo
-app.id: SampleApp
+app.id: dev-test2
 apollo.address: 192.168.23.136:8080
 apollo.meta: http://${apollo.address}
 apollo.enable: true
+
+topics: topic1,topic2

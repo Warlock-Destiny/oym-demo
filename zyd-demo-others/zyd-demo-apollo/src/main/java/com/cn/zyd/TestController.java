@@ -4,6 +4,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 /**
  * @description: 备份操作接口
  * @author: zhangyd
@@ -16,10 +18,12 @@ public class TestController {
     private TestJavaConfigBean testJavaConfigBean;
 
     @RequestMapping("get")
-    public String get(){
+    public String get() {
         int batch = testJavaConfigBean.getBatch();
         int timeout = testJavaConfigBean.getTimeout();
-        return "batch:"+batch+", timeout:"+timeout;
+        List<String> topic = testJavaConfigBean.getTopic();
+        topic.forEach(System.out::println);
+        return "batch:" + batch + ", timeout:" + timeout;
     }
 
 }

@@ -22,7 +22,7 @@
         <module>zyd-demo-component</module>
         <module>zyd-demo-base</module>
         <module>zyd-demo-biz</module>
-        <module>zyd-demo-apollo</module>
+        <module>zyd-demo-others</module>
     </modules>
 
     <dependencies>
