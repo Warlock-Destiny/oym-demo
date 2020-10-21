@@ -1,4 +1,4 @@
-package com.oym.base.web.controller;
+package com.oym.base.web;
 
 import com.oym.base.web.log.annotation.LogSign;
 import com.oym.base.web.model.Result;

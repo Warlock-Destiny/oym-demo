@@ -1,4 +1,4 @@
-package com.oym.base.web.controller;
+package com.oym.base.web;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.context.request.RequestContextHolder;

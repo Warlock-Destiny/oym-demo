@@ -17,7 +17,7 @@ public class ControllerConfig {
 
     @Bean
     @ConditionalOnMissingBean(BaseControllerLog.class)
-    @ConditionalOnProperty(value = "base.web.default.log", havingValue = "true")
+    @ConditionalOnProperty(value = "oym.web.default.log", havingValue = "true")
     public DefaultControllerLog defaultControllerLog() {
         return new DefaultControllerLog();
     }

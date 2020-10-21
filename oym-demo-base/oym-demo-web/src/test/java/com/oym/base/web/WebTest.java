@@ -1,4 +1,4 @@
-package com.oym.component.web;
+package com.oym.base.web;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +18,7 @@ import org.springframework.web.context.WebApplicationContext;
  * @desc
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = MainTest.class)
+@SpringBootTest(classes = WebApplication.class)
 @WebAppConfiguration
 public class WebTest {
     @Autowired

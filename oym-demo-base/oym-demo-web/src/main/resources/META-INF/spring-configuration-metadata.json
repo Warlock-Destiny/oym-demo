@@ -3,7 +3,7 @@
   ],
   "properties": [
     {
-      "name": "component.web.default.log",
+      "name": "oym.web.default.log",
       "type": "java.lang.Boolean",
       "description": "是否启动默认的日志打印",
       "defaultValue": false
