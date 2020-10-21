@@ -11,10 +11,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication(scanBasePackages = "com.oym.base.db")
 @MapperScan("com.oym.base.db")
-public class DbApplication {
+public class TestDbApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(DbApplication.class, args);
+        SpringApplication.run(TestDbApplication.class, args);
     }
 
 }

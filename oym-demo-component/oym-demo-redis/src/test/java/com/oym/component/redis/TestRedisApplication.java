@@ -1,13 +1,13 @@
-package com.oym.common.mail;
+package com.oym.component.redis;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MailApplication {
+public class TestRedisApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MailApplication.class, args);
+        SpringApplication.run(TestRedisApplication.class, args);
     }
 
 }

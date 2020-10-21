@@ -16,7 +16,7 @@ import java.util.List;
  * @date: 2020/10/21 10:20
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = DbApplication.class)
+@SpringBootTest(classes = TestDbApplication.class)
 public class TestDemoMethod {
     @Autowired
     private SysUserDao sysUserDao;

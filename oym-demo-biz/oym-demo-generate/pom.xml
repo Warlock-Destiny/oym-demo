@@ -17,14 +17,13 @@
             <groupId>com.cn</groupId>
             <artifactId>oym-demo-web</artifactId>
             <version>1.0.0</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.cn</groupId>
-            <artifactId>oym-demo-mybatis-plus</artifactId>
+            <artifactId>oym-demo-db</artifactId>
             <version>1.0.0</version>
-            <scope>provided</scope>
         </dependency>
+
         <dependency>
             <groupId>io.swagger</groupId>
             <artifactId>swagger-annotations</artifactId>

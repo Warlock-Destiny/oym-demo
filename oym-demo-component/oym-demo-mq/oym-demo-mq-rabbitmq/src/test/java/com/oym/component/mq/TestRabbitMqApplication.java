@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @desc
  */
 @SpringBootApplication(scanBasePackages = "com.oym.component.mq")
-public class RocketMqApplication {
+public class TestRabbitMqApplication {
     public static void main(String[] args) {
-        SpringApplication.run(RocketMqApplication.class, args);
+        SpringApplication.run(TestRabbitMqApplication.class, args);
     }
 }

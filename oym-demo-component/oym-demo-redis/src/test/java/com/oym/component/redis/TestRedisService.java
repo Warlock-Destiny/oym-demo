@@ -12,7 +12,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @desc
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = RedisApplication.class)
+@SpringBootTest(classes = TestRedisApplication.class)
 public class TestRedisService {
     @Autowired
     private RedisService redisService;

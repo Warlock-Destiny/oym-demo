@@ -18,7 +18,7 @@ import org.springframework.web.context.WebApplicationContext;
  * @desc
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = WebApplication.class)
+@SpringBootTest(classes = TestWebApplication.class)
 @WebAppConfiguration
 public class TestDefaultLog {
     @Autowired

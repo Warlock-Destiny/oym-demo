@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @date: 2020/10/21 11:24
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = MongoApplication.class)
+@SpringBootTest(classes = TestMongoApplication.class)
 public class TestConnectDao {
     @Autowired
     private ConnectDao connectDao;

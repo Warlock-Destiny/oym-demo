@@ -1,6 +1,6 @@
 package com.oym.component.mq.rabbitmq;
 
-import com.oym.component.mq.RabbitMqApplication;
+import com.oym.component.mq.TestRabbitMqApplication;
 import com.oym.component.mq.rabbitmq.model.RabbitMqSuit;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,7 +16,7 @@ import java.nio.charset.StandardCharsets;
  * @desc
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = RabbitMqApplication.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
+@SpringBootTest(classes = TestRabbitMqApplication.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
 public class TestSimpleConsumer {
 
     @Autowired

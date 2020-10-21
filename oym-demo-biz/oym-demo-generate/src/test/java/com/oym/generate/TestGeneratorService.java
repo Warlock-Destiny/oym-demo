@@ -18,8 +18,8 @@ import java.io.IOException;
  */
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = MainTest.class)
-public class GeneratorServiceTest {
+@SpringBootTest(classes = TestGenerateApplication.class)
+public class TestGeneratorService {
 
     @Autowired
     private GeneratorService generatorService;
