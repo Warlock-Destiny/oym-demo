@@ -14,11 +14,10 @@ import org.apache.ibatis.scripting.defaults.RawSqlSource;
 public class Demo extends AbstractMethod {
     @Override
     public MappedStatement injectMappedStatement(Class<?> mapperClass, Class<?> modelClass, TableInfo tableInfo) {
-        String sql = "SELECT %s FROM %s WHERE %s=#{%s} %s";
+        String sql = "SELECT %s FROM %s";
         SqlSource sqlSource = new RawSqlSource(configuration, String.format(sql,
                 sqlSelectColumns(tableInfo, false),
-                tableInfo.getTableName(), tableInfo.getKeyColumn(), tableInfo.getKeyProperty(),
-                tableInfo.getLogicDeleteSql(true, false)), Object.class);
+                tableInfo.getTableName()), Object.class);
         return this.addSelectMappedStatementForTable(mapperClass, "demo", sqlSource, tableInfo);
     }
 }
