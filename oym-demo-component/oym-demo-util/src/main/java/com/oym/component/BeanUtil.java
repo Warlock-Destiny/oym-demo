@@ -15,7 +15,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/23 14:37
  * @desc 对象拷贝
  */

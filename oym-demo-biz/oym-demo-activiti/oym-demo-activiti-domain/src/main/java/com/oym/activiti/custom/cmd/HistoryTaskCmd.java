@@ -8,7 +8,7 @@ import org.activiti.engine.impl.persistence.entity.HistoricTaskInstanceEntityMan
 import java.io.Serializable;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/12/25 16:43
  * @desc
  */

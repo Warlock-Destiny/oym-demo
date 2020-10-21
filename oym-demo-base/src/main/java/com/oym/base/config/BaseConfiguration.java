@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/9/25 14:59
  * @desc
  */

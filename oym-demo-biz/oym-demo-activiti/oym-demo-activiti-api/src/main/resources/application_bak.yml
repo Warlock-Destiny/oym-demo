@@ -39,7 +39,7 @@ spring:
 ribbon:
   eager-load:
     enabled: true
-    clients: zyd-demo
+    clients: oym-demo
   ReadTimeout: 4000
   ConnectTimeout: 4000
 management:

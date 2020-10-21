@@ -8,7 +8,7 @@ import lombok.experimental.Accessors;
 import java.util.List;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/9/27 8:23
  * @desc 实体类model
  */

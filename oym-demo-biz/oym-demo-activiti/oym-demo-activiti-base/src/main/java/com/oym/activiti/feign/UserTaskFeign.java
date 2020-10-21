@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/9 17:41
  * @desc
  */
-@FeignClient(name = "zyd-demo-activiti", path = "/task")
+@FeignClient(name = "oym-demo-activiti", path = "/task")
 public interface UserTaskFeign {
 
     @GetMapping("queryTaskByUserId")

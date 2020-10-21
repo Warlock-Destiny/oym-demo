@@ -6,7 +6,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/8 11:37
  * @desc
  */

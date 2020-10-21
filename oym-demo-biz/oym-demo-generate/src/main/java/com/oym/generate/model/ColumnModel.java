@@ -3,7 +3,7 @@ package com.oym.generate.model;
 import lombok.Data;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2020/7/20 10:30
  * @desc
  */

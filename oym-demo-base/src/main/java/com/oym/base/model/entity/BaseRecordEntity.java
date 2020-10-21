@@ -12,7 +12,7 @@ import lombok.experimental.Accessors;
 import java.util.Date;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/18 11:43
  * @desc 默认的只需要记录的实体类 比如日志记录表
  */

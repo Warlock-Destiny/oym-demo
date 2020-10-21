@@ -8,7 +8,7 @@ import lombok.experimental.Accessors;
 import java.util.Date;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2020/2/25 15:05
  * @desc
  */

@@ -12,11 +12,11 @@ import java.util.List;
 
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/9 17:12
  * @desc
  */
-@FeignClient(name = "zyd-demo-activiti", path = "/process")
+@FeignClient(name = "oym-demo-activiti", path = "/process")
 public interface ProcessFeign {
 
     @PostMapping("start")

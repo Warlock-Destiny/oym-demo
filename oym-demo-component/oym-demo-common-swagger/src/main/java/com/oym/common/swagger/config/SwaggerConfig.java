@@ -41,7 +41,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title(serviceName)
                 .description("接口文档说明")
-                .contact(new Contact("zyd", "", ""))
+                .contact(new Contact("oym-demo", "", ""))
                 .version("2.0")
                 .build();
     }

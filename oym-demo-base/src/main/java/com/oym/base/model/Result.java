@@ -6,7 +6,7 @@ import lombok.Data;
 import java.io.Serializable;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/9 17:24
  * @desc 返回值公共类
  */

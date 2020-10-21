@@ -1,7 +1,7 @@
 package com.oym.base.constant;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/28 9:13
  * @desc
  */

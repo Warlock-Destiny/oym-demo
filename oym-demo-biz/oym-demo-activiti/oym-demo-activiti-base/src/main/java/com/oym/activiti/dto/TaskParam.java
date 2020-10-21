@@ -3,7 +3,7 @@ package com.oym.activiti.dto;
 import java.util.HashMap;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/29 16:33
  * @desc 任务必须要有的参数
  */

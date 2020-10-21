@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2020/5/15 15:47
  * @desc 批量插入数据库 插入字段不包括主键和更新时间
  */

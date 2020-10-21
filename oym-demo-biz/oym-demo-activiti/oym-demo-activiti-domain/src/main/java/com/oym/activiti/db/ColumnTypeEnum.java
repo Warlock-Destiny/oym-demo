@@ -8,7 +8,7 @@ import java.util.Map;
 import java.util.function.Function;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/9/27 11:19
  * @desc 字段对应的枚举类及处理方式
  */

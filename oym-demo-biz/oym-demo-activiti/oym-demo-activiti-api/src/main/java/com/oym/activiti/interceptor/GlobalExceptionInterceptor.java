@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/22 16:49
  * @desc 全局异常处理类
  */

@@ -1,7 +1,7 @@
 package com.oym.component.mq.model;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/11/22 15:48
  * @desc
  */

@@ -110,7 +110,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 //        converter.setKeyPair(keyPair);
 //        return converter;
         //对称加密
-        converter.setSigningKey("zyd");
+        converter.setSigningKey("zhangyd");
         return converter;
     }
 

@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.*;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/9/27 14:32
  * @desc
  */
@@ -17,13 +17,13 @@ public class SqlBuilderTest {
         Map<String, Object> map = new HashMap<>();
         map.put("id", 123);
         map.put("dict_field", "part_name");
-        map.put("dict_code", "zyd");
+        map.put("dict_code", "zhangyd");
         map.put("dict_value", "这样的");
         map.put("dict_desc", "姓名");
         map.put("delete_status", 0);
         map.put("gmt_create", new Date());
         map.put("gmt_modified", new Date());
-        String sql = SqlBuilder.newInstance("zyd", "sys_dict", entityModel, map).buildInsertSql();
+        String sql = SqlBuilder.newInstance("zhangyd", "sys_dict", entityModel, map).buildInsertSql();
         System.out.println(sql);
     }
 
@@ -34,13 +34,13 @@ public class SqlBuilderTest {
         Map<String, Object> map = new HashMap<>();
         map.put("id", 123);
         map.put("dict_field", "part_name");
-        map.put("dict_code", "zyd");
+        map.put("dict_code", "zhangyd");
         map.put("dict_value", "这样的");
         map.put("dict_desc", "姓名");
         map.put("delete_status", 0);
         map.put("gmt_create", new Date());
         map.put("gmt_modified", new Date());
-        String sql = SqlBuilder.newInstance("zyd", "sys_dict", entityModel, map).buildDeleteSql();
+        String sql = SqlBuilder.newInstance("zhangyd", "sys_dict", entityModel, map).buildDeleteSql();
         System.out.println(sql);
     }
 

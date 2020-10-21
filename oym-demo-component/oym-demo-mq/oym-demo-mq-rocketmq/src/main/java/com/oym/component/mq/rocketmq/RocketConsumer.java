@@ -16,7 +16,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Consumer;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/11/20 11:27
  * @desc 可以使用spring注解@RabbitListener实现或者通过消费此操作实现
  */

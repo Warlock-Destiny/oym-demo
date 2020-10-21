@@ -1,7 +1,7 @@
 package com.oym.base.exception;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/22 16:51
  * @desc 查询参数错误异常
  */

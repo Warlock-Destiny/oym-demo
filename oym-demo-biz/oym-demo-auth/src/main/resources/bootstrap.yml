@@ -4,7 +4,7 @@ spring:
   #应用配置
   application:
     #名称: OAuth2认证授权服务
-    name: zyd-demo-auth
+    name: oym-demo-auth
   cloud:
     nacos:
       discovery:

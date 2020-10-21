@@ -14,7 +14,7 @@ import org.apache.rocketmq.common.message.Message;
 import org.apache.rocketmq.remoting.exception.RemotingException;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/11/22 9:56
  * @desc
  */

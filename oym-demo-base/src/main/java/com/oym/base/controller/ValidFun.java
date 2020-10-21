@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.function.Supplier;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/27 4:11
  * @desc 校验功能
  */

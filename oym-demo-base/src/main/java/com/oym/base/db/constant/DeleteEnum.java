@@ -1,7 +1,7 @@
 package com.oym.base.db.constant;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/28 9:13
  * @desc 如果数据有删除字段默认用这个字段格式
  */

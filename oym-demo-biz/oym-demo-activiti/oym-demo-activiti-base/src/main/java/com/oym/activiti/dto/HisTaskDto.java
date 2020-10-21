@@ -9,7 +9,7 @@ import lombok.experimental.Accessors;
 import java.util.Date;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/9 14:22
  */
 @Data

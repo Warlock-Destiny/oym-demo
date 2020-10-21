@@ -8,5 +8,5 @@ spring:
     port: 9876
     hasProducer: true
     hasConsumer: true
-    producerGroup: zyd
+    producerGroup: zhangyd
     consumerGroup: zyd1

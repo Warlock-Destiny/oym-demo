@@ -13,8 +13,8 @@ zuul:
   sensitiveHeaders: '*'
   routes:
     #服务映射，服务名： 映射地址，或者用下面的方式
-    zyd-demo-activiti: /activiti/**
-    zyd-demo-server: /auth/**
+    oym-demo-activiti: /activiti/**
+    oym-demo-server: /auth/**
 
   #添加代理头
   add-proxy-headers: true

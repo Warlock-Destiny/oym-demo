@@ -1,7 +1,7 @@
 package com.oym.component.mybatisplus.constant;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/28 9:13
  * @desc
  */

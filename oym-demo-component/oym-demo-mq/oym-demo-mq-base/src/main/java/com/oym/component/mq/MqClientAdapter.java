@@ -3,7 +3,7 @@ package com.oym.component.mq;
 import com.oym.component.mq.config.MqProperties;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/11/22 10:22
  * @desc
  */

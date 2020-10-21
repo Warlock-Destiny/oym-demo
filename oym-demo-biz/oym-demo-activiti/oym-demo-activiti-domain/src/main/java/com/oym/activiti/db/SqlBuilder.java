@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/9/27 8:43
  * @desc sql语句的制作
  */

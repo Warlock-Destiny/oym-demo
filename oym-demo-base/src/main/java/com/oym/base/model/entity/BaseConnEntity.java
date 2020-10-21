@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/18 11:43
  * @desc 默认的只有关系连接的实体类 AB表关联类
  */

@@ -4,7 +4,7 @@ import com.oym.component.mq.model.MqSuit;
 import lombok.Data;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/11/22 15:48
  * @desc
  */

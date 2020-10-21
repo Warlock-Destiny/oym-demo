@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/10/27 0:35
  * @desc 查询抽象类
  */

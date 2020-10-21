@@ -7,7 +7,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/12/26 14:06
  * @desc
  */

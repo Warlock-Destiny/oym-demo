@@ -3,7 +3,7 @@ package com.oym.component.mq.model;
 import lombok.Data;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/11/20 11:37
  * @desc
  */

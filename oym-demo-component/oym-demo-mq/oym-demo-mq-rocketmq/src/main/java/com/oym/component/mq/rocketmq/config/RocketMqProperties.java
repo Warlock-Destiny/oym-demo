@@ -6,7 +6,7 @@ import lombok.EqualsAndHashCode;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * @author zyd
+ * @author zhangyd
  * @date 2019/11/22 11:23
  * @desc
  */
