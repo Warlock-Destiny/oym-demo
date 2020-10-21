@@ -9,7 +9,7 @@ import com.intellij.database.util.DasUtil
  *   FILES       files helper
  */
 
-basePackage = "com.cn.zyd."
+basePackage = "com.oym."
 // 模块包
 moduleName = basePackage + ".frame"
 // 基础模块包
@@ -50,7 +50,7 @@ def generate(table, dir) {
 def generateMapping(out, tableName, className, classComment, fields) {
     out.println "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" +
             "<!DOCTYPE mapper PUBLIC \"-//mybatis.org//DTD Mapper 3.0//EN\" \"http://mybatis.org/dtd/mybatis-3-mapper.dtd\">\n" +
-            "<mapper namespace=\"com.cn.zyd.activiti.dao.TestZhangydDao\">"
+            "<mapper namespace=\"com.oym.activiti.dao.TestZhangydDao\">"
 
     //batchInsert
 //    generateInsert(out, tableName, className, classComment, fields)

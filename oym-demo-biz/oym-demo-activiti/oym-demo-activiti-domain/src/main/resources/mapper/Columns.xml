@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.oym.activiti.dao.ColumnsDao">
+
+    <select id="selectTableInfoByDbAndTable" resultType="com.oym.activiti.entity.ColumnInfo">
+        SELECT
+            COLUMN_NAME as columnName,CAST(DATA_TYPE AS CHAR) AS dataType,COLUMN_KEY as columnKey
+        FROM
+            information_schema.`COLUMNS`
+        WHERE
+            TABLE_SCHEMA = #{db}
+        AND TABLE_NAME = #{table}
+    </select>
+
+</mapper>

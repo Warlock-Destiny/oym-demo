@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.cn</groupId>
-    <artifactId>zyd-demo</artifactId>
+    <artifactId>oym-demo</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
 
@@ -19,10 +19,10 @@
     </properties>
 
     <modules>
-        <module>zyd-demo-component</module>
-        <module>zyd-demo-base</module>
-        <module>zyd-demo-biz</module>
-        <module>zyd-demo-others</module>
+        <module>oym-demo-component</module>
+        <module>oym-demo-base</module>
+        <module>oym-demo-biz</module>
+        <module>oym-demo-others</module>
     </modules>
 
     <dependencies>
