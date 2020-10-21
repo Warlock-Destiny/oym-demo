@@ -8,9 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2019/11/21 14:31
  * @desc
  */
-@SpringBootApplication(scanBasePackages = "com.cn.mq")
-public class Main {
+@SpringBootApplication(scanBasePackages = "com.oym.component.mq")
+public class RabbitMqApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(RabbitMqApplication.class, args);
     }
 }

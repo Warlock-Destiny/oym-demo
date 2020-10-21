@@ -1,12 +1,12 @@
-package com.oym.component.mybatisplus.method;
+package com.oym.base.db.method;
 
 import com.baomidou.mybatisplus.core.injector.AbstractMethod;
 import com.baomidou.mybatisplus.core.metadata.TableFieldInfo;
 import com.baomidou.mybatisplus.core.metadata.TableInfo;
 import com.baomidou.mybatisplus.core.toolkit.StringUtils;
 import com.baomidou.mybatisplus.core.toolkit.sql.SqlScriptUtils;
-import com.oym.component.mybatisplus.entity.BaseEntity;
 import com.google.common.collect.ImmutableList;
+import com.oym.base.db.entity.BaseEntity;
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.SqlSource;
 

@@ -1,6 +1,6 @@
 package com.oym.component.mq.rocketmq;
 
-import com.oym.component.mq.Main;
+import com.oym.component.mq.RocketMqApplication;
 import com.oym.component.mq.rocketmq.model.RocketMqMessage;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,8 +16,8 @@ import java.nio.charset.StandardCharsets;
  * @desc
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Main.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
-public class ProducerTest {
+@SpringBootTest(classes = RocketMqApplication.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
+public class TestProducer {
 
     @Autowired
     private RocketProducer baseProducer;

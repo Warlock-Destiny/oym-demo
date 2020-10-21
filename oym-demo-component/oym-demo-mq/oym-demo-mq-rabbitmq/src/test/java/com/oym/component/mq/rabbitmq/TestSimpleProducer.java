@@ -1,7 +1,7 @@
 package com.oym.component.mq.rabbitmq;
 
 import com.oym.component.mq.BaseProducer;
-import com.oym.component.mq.Main;
+import com.oym.component.mq.RabbitMqApplication;
 import com.oym.component.mq.rabbitmq.model.RabbitMqMessage;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,8 +15,8 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @desc
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Main.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
-public class SimpleProducerTest {
+@SpringBootTest(classes = RabbitMqApplication.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
+public class TestSimpleProducer {
 
     @Autowired
     private BaseProducer<RabbitMqMessage> baseProducer;

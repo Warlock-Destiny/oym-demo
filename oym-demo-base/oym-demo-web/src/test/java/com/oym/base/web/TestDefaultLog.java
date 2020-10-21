@@ -20,7 +20,7 @@ import org.springframework.web.context.WebApplicationContext;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = WebApplication.class)
 @WebAppConfiguration
-public class WebTest {
+public class TestDefaultLog {
     @Autowired
     private WebApplicationContext webApplicationContext;
     private MockMvc mockMvc;

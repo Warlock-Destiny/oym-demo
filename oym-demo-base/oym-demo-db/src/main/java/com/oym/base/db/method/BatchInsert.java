@@ -1,4 +1,4 @@
-package com.oym.component.mybatisplus.method;
+package com.oym.base.db.method;
 
 import com.baomidou.mybatisplus.core.injector.AbstractMethod;
 import com.baomidou.mybatisplus.core.metadata.TableFieldInfo;

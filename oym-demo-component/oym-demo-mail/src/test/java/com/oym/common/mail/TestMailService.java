@@ -8,8 +8,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = TestMain.class)
-public class MailServiceTest {
+@SpringBootTest(classes = MailApplication.class)
+public class TestMailService {
 
     @Autowired
     private MailService mailService;

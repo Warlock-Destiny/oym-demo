@@ -1,7 +1,7 @@
-package com.oym.component.mq.rocketmq;
+package com.oym.component.mq.rabbitmq;
 
-import com.oym.component.mq.Main;
-import com.oym.component.mq.rocketmq.config.RocketMqSuit;
+import com.oym.component.mq.RabbitMqApplication;
+import com.oym.component.mq.rabbitmq.model.RabbitMqSuit;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,21 +16,20 @@ import java.nio.charset.StandardCharsets;
  * @desc
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = Main.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
-public class ConsumerTest {
+@SpringBootTest(classes = RabbitMqApplication.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
+public class TestSimpleConsumer {
 
     @Autowired
-    private RocketConsumer rocketConsumer;
+    private RabbitConsumer baseConsumer;
 
     @Test
     public void testConsumer() throws InterruptedException {
-        RocketMqSuit rocketMqSuit = new RocketMqSuit();
-        rocketMqSuit.setTopic("topic1");
-        rocketMqSuit.setTags("*");
-        rocketConsumer.consumer(rocketMqSuit, x -> {
+        RabbitMqSuit rabbitMqSuit = new RabbitMqSuit();
+        rabbitMqSuit.setQueue("queue");
+        baseConsumer.consumer(rabbitMqSuit, x -> {
             String msg = new String(x.getBytes(), StandardCharsets.UTF_8);
             System.out.println(msg);
         });
-        Thread.sleep(30000L);
+        Thread.sleep(10000L);
     }
 }

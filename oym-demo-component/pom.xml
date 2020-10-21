@@ -18,7 +18,6 @@
         <module>oym-demo-common-feign</module>
         <module>oym-demo-mail</module>
         <module>oym-demo-mq</module>
-        <module>oym-demo-mybatis-plus</module>
         <module>oym-demo-redis</module>
     </modules>
 

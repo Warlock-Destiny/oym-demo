@@ -21,14 +21,12 @@ import java.util.Date;
 @AllArgsConstructor
 @Accessors(chain = true)
 public abstract class BaseRecordEntity extends BaseEntity {
-    public static final String ID = "id";
-    public static final String GMT_CREATE = "gmt_create";
 
     // 主键
     @TableId(value = ID, type = IdType.AUTO)
     protected Long id;
     // 创建时间
-    @TableField(value = GMT_CREATE, insertStrategy = FieldStrategy.NOT_NULL)
+    @TableField(value = CREATE_TIME, insertStrategy = FieldStrategy.NOT_NULL)
     protected Date gmtCreate;
 
 }

@@ -17,8 +17,6 @@ import lombok.experimental.Accessors;
 @AllArgsConstructor
 @Accessors(chain = true)
 public abstract class BaseConnEntity extends BaseEntity {
-    public static final String ID = "id";
-
     // 主键
     @TableId(value = ID, type = IdType.AUTO)
     protected Long id;
