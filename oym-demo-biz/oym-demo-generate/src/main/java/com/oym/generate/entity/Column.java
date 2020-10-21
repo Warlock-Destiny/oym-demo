@@ -1,12 +1,12 @@
 package com.oym.generate.entity;
 
-import com.oym.component.mybatisplus.entity.BaseEmptyEntity;
+import com.oym.base.db.entity.BaseEntity;
 import lombok.Data;
 import lombok.experimental.Accessors;
 
 @Data
 @Accessors(chain = true)
-public class Column extends BaseEmptyEntity {
+public class Column extends BaseEntity {
     //库名
     private String tableSchema;
     //表名

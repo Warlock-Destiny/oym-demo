@@ -1,12 +1,11 @@
 package com.oym.generate.entity;
 
-import com.oym.component.mybatisplus.entity.BaseEmptyEntity;
-import lombok.Data;
+import com.oym.base.db.entity.BaseEntity;
 
 import java.util.Date;
 import java.util.List;
 
-public class Table extends BaseEmptyEntity {
+public class Table extends BaseEntity {
     //库名
     private String tableSchema;
     //表名

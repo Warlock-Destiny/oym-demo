@@ -1,7 +1,7 @@
 package com.oym.generate.dao;
 
-import com.oym.component.mybatisplus.BaseDao;
-import com.oym.component.mybatisplus.entity.BaseEntity;
+import com.oym.base.db.dao.BaseDao;
+import com.oym.base.db.entity.BaseEntity;
 import com.oym.generate.base.query.TableQuery;
 import com.oym.generate.entity.Column;
 import com.oym.generate.entity.Table;
