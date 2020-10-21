@@ -21,9 +21,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author: huangyibo
- * @Date: 2019/1/31 0:08
- * @Description: mongoDB基础方法封装
+ * @ClassName: MongoDbDao
+ * @Description: 
+ * @author: zhangyd
+ * @date: 2020/10/21 13:39
  */
 @Slf4j
 public abstract class MongoDbDao<T extends BaseCommonEntity> implements BaseDao<T> {
