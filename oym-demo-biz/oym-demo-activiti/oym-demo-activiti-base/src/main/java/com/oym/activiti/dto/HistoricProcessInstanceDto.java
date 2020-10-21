@@ -1,6 +1,6 @@
 package com.oym.activiti.dto;
 
-import com.oym.base.model.BaseDto;
+import com.oym.base.web.model.BaseDto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

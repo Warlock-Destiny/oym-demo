@@ -5,7 +5,7 @@ import com.oym.activiti.dto.HistoricProcessInstanceDto;
 import com.oym.activiti.dto.ProcessStartDto;
 import com.oym.activiti.query.ProcessQuery;
 import com.oym.activiti.service.ProcessService;
-import com.oym.base.model.Result;
+import com.oym.base.web.model.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +31,7 @@ public class ProcessController {
             @RequestBody ProcessStartDto processStartDto
     ) {
         String processInstanceId = processService.startProcess(processStartDto);
-        return Result.<String>ok("执行成功").data(processInstanceId);
+        return Result.okData(processInstanceId);
     }
 
     @ApiOperation("关闭正在执行中的流程")
@@ -49,7 +49,7 @@ public class ProcessController {
     public Result<List<HistoricProcessInstanceDto>> getHisProcessInstantByUserId(
             @RequestBody ProcessQuery processQuery
     ) {
-        return Result.<List<HistoricProcessInstanceDto>>ok("执行成功").data(processService.getHisProcessInstantByUserId(processQuery));
+        return Result.okData(processService.getHisProcessInstantByUserId(processQuery));
     }
 
     @ApiOperation("查看详情")
@@ -57,7 +57,7 @@ public class ProcessController {
     public Result<List<CommentDto>> detail(
             @RequestBody ProcessQuery processQuery
     ) {
-        return Result.<List<CommentDto>>ok().data(processService.detail(processQuery));
+        return Result.okData(processService.detail(processQuery));
     }
 
     @ApiOperation("查看任务是否完成")
@@ -65,7 +65,7 @@ public class ProcessController {
     Result<Boolean> isComplete(
             @RequestParam("processInstantId") String processInstantId
     ) {
-        return Result.<Boolean>ok().data(processService.isComplete(processInstantId));
+        return Result.okData(processService.isComplete(processInstantId));
     }
 
 }

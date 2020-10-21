@@ -1,6 +1,6 @@
 package com.oym.activiti.entity;
 
-import com.oym.base.model.entity.BaseEntity;
+import com.oym.base.db.entity.BaseEntity;
 import lombok.Data;
 import lombok.experimental.Accessors;
 

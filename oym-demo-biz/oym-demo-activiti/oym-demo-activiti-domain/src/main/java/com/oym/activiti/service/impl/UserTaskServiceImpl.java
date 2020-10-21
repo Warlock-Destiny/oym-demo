@@ -7,7 +7,7 @@ import com.oym.activiti.dto.TaskDto;
 import com.oym.activiti.dto.TaskParam;
 import com.oym.activiti.service.ProcessService;
 import com.oym.activiti.service.UserTaskService;
-import com.oym.base.model.Result;
+import com.oym.base.web.model.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.activiti.bpmn.model.BpmnModel;
 import org.activiti.bpmn.model.FlowNode;

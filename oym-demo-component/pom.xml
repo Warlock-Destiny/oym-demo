@@ -20,7 +20,6 @@
         <module>oym-demo-mq</module>
         <module>oym-demo-mybatis-plus</module>
         <module>oym-demo-redis</module>
-        <module>oym-demo-web</module>
     </modules>
 
 </project>

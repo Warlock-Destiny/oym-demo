@@ -50,7 +50,7 @@ public class GenUtils {
             ZipOutputStream zip) {
 
         // entity 处理多余的字段
-        List<Column> columnList = table.getColumns();
+        List<Column> columnList = table.getColumnList();
         //配置信息
         Configuration config = getConfig();
         boolean hasBigDecimal = false;
@@ -69,7 +69,7 @@ public class GenUtils {
         map.put("className", table.getClassName());
         map.put("classname", table.getClassname());
         map.put("pathName", table.getClassname().toLowerCase());
-        map.put("columns", table.getColumns());
+        map.put("columns", table.getColumnList());
         map.put("hasBigDecimal", hasBigDecimal);
         map.put("mainPath", mainPath);
         map.put("package", packName);

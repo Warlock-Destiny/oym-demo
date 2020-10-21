@@ -1,6 +1,6 @@
 package com.oym.auth.entity;
 
-import com.oym.base.model.entity.BaseCommonEntity;
+import com.oym.base.db.entity.BaseCommonEntity;
 import lombok.ToString;
 import org.springframework.security.core.GrantedAuthority;
 

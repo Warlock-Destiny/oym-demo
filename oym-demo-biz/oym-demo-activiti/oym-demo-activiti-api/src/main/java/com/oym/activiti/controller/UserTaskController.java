@@ -4,7 +4,7 @@ import com.oym.activiti.dto.CompleteTaskDto;
 import com.oym.activiti.dto.HisTaskDto;
 import com.oym.activiti.dto.TaskDto;
 import com.oym.activiti.service.UserTaskService;
-import com.oym.base.model.Result;
+import com.oym.base.web.model.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,7 +30,7 @@ public class UserTaskController {
             @RequestParam("userId") String userId,
             @RequestParam("start") int start,
             @RequestParam("end") int end) {
-        return Result.<List<TaskDto>>ok().data(userTaskService.queryTaskByUser(userId, start, end));
+        return Result.okData(userTaskService.queryTaskByUser(userId, start, end));
     }
 
     @PostMapping("completeTask")
@@ -44,7 +44,7 @@ public class UserTaskController {
     public Result<List<String>> queryHisComment(
             @RequestParam("userId") String userId,
             @RequestParam("taskId") String taskId) {
-        return Result.<List<String>>ok().data(userTaskService.queryHisComment(userId, taskId));
+        return Result.okData(userTaskService.queryHisComment(userId, taskId));
     }
 
     @GetMapping("queryHistoryTask")
@@ -53,7 +53,7 @@ public class UserTaskController {
             @RequestParam("start") int start,
             @RequestParam("end") int end
     ) {
-        return Result.<List<HisTaskDto>>ok().data(userTaskService.queryHistoryTask(userId, start, end));
+        return Result.okData(userTaskService.queryHistoryTask(userId, start, end));
     }
 
     @PostMapping("changeAssigner")

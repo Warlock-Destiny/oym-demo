@@ -1,6 +1,6 @@
 package com.oym.common.auth.model;
 
-import com.oym.base.model.entity.BaseCommonEntity;
+import com.oym.base.db.entity.BaseCommonEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

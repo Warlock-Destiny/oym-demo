@@ -1,6 +1,6 @@
 package com.oym.activiti.query;
 
-import com.oym.base.model.BaseQuery;
+import com.oym.base.web.model.BaseQuery;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

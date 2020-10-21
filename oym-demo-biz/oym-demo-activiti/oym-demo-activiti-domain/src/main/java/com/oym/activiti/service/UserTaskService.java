@@ -4,7 +4,7 @@ package com.oym.activiti.service;
 import com.oym.activiti.dto.CompleteTaskDto;
 import com.oym.activiti.dto.HisTaskDto;
 import com.oym.activiti.dto.TaskDto;
-import com.oym.base.model.Result;
+import com.oym.base.web.model.Result;
 
 import java.util.List;
 

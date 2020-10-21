@@ -4,7 +4,7 @@ import com.oym.activiti.dto.CommentDto;
 import com.oym.activiti.dto.HistoricProcessInstanceDto;
 import com.oym.activiti.dto.ProcessStartDto;
 import com.oym.activiti.query.ProcessQuery;
-import com.oym.base.model.Result;
+import com.oym.base.web.model.Result;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 

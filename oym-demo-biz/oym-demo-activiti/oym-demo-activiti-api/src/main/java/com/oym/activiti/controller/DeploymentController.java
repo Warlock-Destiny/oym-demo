@@ -3,7 +3,7 @@ package com.oym.activiti.controller;
 import com.oym.activiti.dto.DeploymentDto;
 import com.oym.activiti.dto.ProcessDto;
 import com.oym.activiti.service.impl.DeploymentServiceImpl;
-import com.oym.base.model.Result;
+import com.oym.base.web.model.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +38,7 @@ public class DeploymentController {
             @RequestParam(value = "deploymentId", required = false) String deploymentId,
             @RequestParam("bpmnXml") String bpmnXml
     ) {
-        return Result.<String>ok().data(deploymentServiceImpl.deploy(deployName, deploymentId, bpmnXml));
+        return Result.okData(deploymentServiceImpl.deploy(deployName, deploymentId, bpmnXml));
     }
 
 
@@ -48,7 +48,7 @@ public class DeploymentController {
     @ApiOperation("查看已有的部署的列表")
     @GetMapping("listDeployment")
     public Result<List<DeploymentDto>> listDeployment() {
-        return Result.<List<DeploymentDto>>ok().data(deploymentServiceImpl.listDeployment());
+        return Result.okData(deploymentServiceImpl.listDeployment());
     }
 
     /**
@@ -57,7 +57,7 @@ public class DeploymentController {
     @ApiOperation("查看已有的流程实例")
     @GetMapping("listProcess")
     public Result<List<ProcessDto>> listProcess() {
-        return Result.<List<ProcessDto>>ok().data(deploymentServiceImpl.listProcess());
+        return Result.okData(deploymentServiceImpl.listProcess());
     }
 
     /**
@@ -66,7 +66,7 @@ public class DeploymentController {
     @GetMapping("detail/{deploymentId}")
     public Result<DeploymentDto> detail(
             @PathVariable("deploymentId") String deploymentId) {
-        return Result.<DeploymentDto>ok().data(deploymentServiceImpl.detail(deploymentId));
+        return Result.okData(deploymentServiceImpl.detail(deploymentId));
     }
 
     /**
@@ -76,6 +76,6 @@ public class DeploymentController {
     public Result<String> remove(
             @PathVariable("deploymentId") String deploymentId
     ) {
-        return Result.<String>ok().data(deploymentServiceImpl.remove(deploymentId));
+        return Result.okData(deploymentServiceImpl.remove(deploymentId));
     }
 }
