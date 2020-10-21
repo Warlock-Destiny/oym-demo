@@ -20,7 +20,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Accessors(chain = true)
-public abstract class BaseRecordEntity implements BaseEntity {
+public abstract class BaseRecordEntity extends BaseEntity {
     public static final String ID = "id";
     public static final String GMT_CREATE = "gmt_create";
 

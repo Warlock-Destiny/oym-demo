@@ -9,7 +9,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(fluent = true)
-public class ActReDeployment implements BaseEntity {
+public class ActReDeployment extends BaseEntity {
 
     // 
     private String id;

@@ -9,7 +9,7 @@ import lombok.experimental.Accessors;
  */
 @Data
 @Accessors(fluent = true)
-public class ActGeBytearray implements BaseEntity {
+public class ActGeBytearray extends BaseEntity {
 
     // 
     private String id;

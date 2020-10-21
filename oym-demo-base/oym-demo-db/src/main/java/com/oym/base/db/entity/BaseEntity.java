@@ -7,6 +7,6 @@ import java.io.Serializable;
  * @date 2019/10/18 11:43
  * @desc 实体抽象类
  */
-public interface BaseEntity extends Serializable {
+public abstract class BaseEntity implements Serializable {
 
 }

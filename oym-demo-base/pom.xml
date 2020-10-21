@@ -13,6 +13,7 @@
 
     <modules>
         <module>oym-demo-db</module>
+        <module>oym-demo-mongodb</module>
         <module>oym-demo-web</module>
     </modules>
 
