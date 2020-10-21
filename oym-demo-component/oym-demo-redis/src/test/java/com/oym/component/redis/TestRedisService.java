@@ -12,8 +12,8 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @desc
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = TestMain.class)
-public class RedisServiceTest {
+@SpringBootTest(classes = RedisApplication.class)
+public class TestRedisService {
     @Autowired
     private RedisService redisService;
 

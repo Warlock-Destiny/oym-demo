@@ -12,7 +12,7 @@ import java.util.stream.Stream;
  * @date 2019/11/25 9:05
  * @desc
  */
-public class BatchUtilTest {
+public class TestBatchUtil {
     @Test
     public void test(){
         List<Integer> list = Stream.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10).collect(Collectors.toList());

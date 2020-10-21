@@ -11,8 +11,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @EnableApolloConfig
 @SpringBootApplication
-public class Main {
+public class ApolloApplication {
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(ApolloApplication.class, args);
     }
 }

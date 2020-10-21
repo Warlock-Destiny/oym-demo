@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @date 2019/11/21 14:31
  * @desc
  */
-@SpringBootApplication(scanBasePackages = "com.cn.mq")
+@SpringBootApplication(scanBasePackages = "com.oym.component.mq")
 public class RocketMqApplication {
     public static void main(String[] args) {
         SpringApplication.run(RocketMqApplication.class, args);
