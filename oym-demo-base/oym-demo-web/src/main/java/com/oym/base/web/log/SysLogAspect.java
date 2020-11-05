@@ -30,8 +30,8 @@ public class SysLogAspect {
 
     private BaseControllerLog baseControllerLog;
 
-    @Autowired(required = false)
-    public SysLogAspect(BaseControllerLog baseControllerLog) {
+
+    public SysLogAspect(@Autowired(required = false) BaseControllerLog baseControllerLog) {
         this.baseControllerLog = baseControllerLog;
     }
 
