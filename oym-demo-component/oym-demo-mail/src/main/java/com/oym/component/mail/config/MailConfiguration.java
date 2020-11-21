@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class MailConfiguration {
+
     @Bean
     @ConditionalOnProperty(value = "component.mail", havingValue = "true")
     public MailService mailUtil() {
