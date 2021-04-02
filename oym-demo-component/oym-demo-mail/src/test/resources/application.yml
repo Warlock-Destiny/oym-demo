@@ -1,23 +1,23 @@
 ##如果要使用邮件功能 可以在项目配置文件配置上这部分内容
 spring:
   mail:
-    host:
-    username:
-    password:
+    host: mail.easipass.com
+    username: ydzhang
+    password: Cpic1234!
     default-encoding: utf-8
     #以上部分可以重写
     #SSLSocket
-    properties:
-      mail:
-        smtp:
-          ssl:
-            trust: mail.ffcs.cn
-          socketFactory:
-            class: javax.net.ssl.SSLSocketFactory
-            port: 465
-            auth: true
-        starttls:
-          enable: true
-          required: true
+#    properties:
+#      mail:
+#        smtp:
+#          ssl:
+#            trust: mail.easipass.com
+#          socketFactory:
+#            class: javax.net.ssl.SSLSocketFactory
+#            port: 465
+#            auth: true
+#        starttls:
+#          enable: true
+#          required: true
 component:
   mail: true
