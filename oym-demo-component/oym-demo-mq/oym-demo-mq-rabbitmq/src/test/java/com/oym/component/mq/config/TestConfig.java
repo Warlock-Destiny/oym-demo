@@ -17,8 +17,8 @@ public class TestConfig {
 
     @Bean
     public Binding binding() {
-        Queue queue = new Queue("queue");
-        return BindingBuilder.bind(queue).to(new FanoutExchange("fanout"));
+        Queue queue = new Queue("bdp-exchange-danger");
+        return BindingBuilder.bind(queue).to(new FanoutExchange("zyd.fanout"));
     }
 
 }

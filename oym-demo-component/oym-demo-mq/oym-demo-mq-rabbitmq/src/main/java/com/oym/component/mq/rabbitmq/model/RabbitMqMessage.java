@@ -3,6 +3,7 @@ package com.oym.component.mq.rabbitmq.model;
 import com.oym.component.mq.model.MqMessage;
 import lombok.Data;
 import lombok.experimental.Accessors;
+import org.springframework.amqp.core.MessageProperties;
 
 /**
  * @author zhangyd
@@ -16,5 +17,6 @@ public class RabbitMqMessage extends MqMessage {
     private String queue;
     private String exchange;
     private String routingKey;
-    private Object o;
+    private String o;
+    private MessageProperties properties;
 }

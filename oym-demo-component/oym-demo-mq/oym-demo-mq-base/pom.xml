@@ -13,11 +13,6 @@
     <dependencies>
         <dependency>
             <groupId>com.cn</groupId>
-            <artifactId>oym-demo-db</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>com.cn</groupId>
             <artifactId>oym-demo-web</artifactId>
             <version>1.0.0</version>
         </dependency>

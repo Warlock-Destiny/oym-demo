@@ -4,10 +4,11 @@ server:
 
 spring:
   rabbitmq:
-    host: localhost
+    host: 192.168.125.151
     port: 5672
-    username: guest
-    password: guest
+    virtual-host: test1vhost
+    username: gcc
+    password: easipass
     listener:
       simple:
         concurrency: 10
